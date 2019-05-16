@@ -2,12 +2,14 @@ GEM
   remote: https://rubygems.org/
   specs:
     benchmark-ips (2.7.2)
+    ruby-prof (0.17.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   benchmark-ips
+  ruby-prof
 
 BUNDLED WITH
    1.17.3
