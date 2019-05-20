@@ -1,0 +1,599 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>ruby-prof call tree</title>
+<style type="text/css">
+<!--
+  body {
+    font-size:70%;
+    padding:0;
+    margin:5px;
+    margin-right:0px;
+    margin-left:0px;
+    background: #ffffff;
+  }
+  ul {
+    margin-left:0px;
+    margin-top:0px;
+    margin-bottom:0px;
+    padding-left:0px;
+    list-style-type:none;
+  }
+  li {
+    margin-left:11px;
+    padding:0px;
+    white-space:nowrap;
+    border-top:1px solid #cccccc;
+    border-left:1px solid #cccccc;
+    border-bottom:none;
+  }
+  .thread {
+    margin-left:11px;
+    background:#708090;
+    padding-top:3px;
+    padding-left:12px;
+    padding-bottom:2px;
+    border-left:1px solid #CCCCCC;
+    border-top:1px solid #CCCCCC;
+    font-weight:bold;
+  }
+  .hidden {
+    display:none;
+    width:0px;
+    height:0px;
+    margin:0px;
+    padding:0px;
+    border-style:none;
+  }
+  .color01 { background:#adbdeb }
+  .color05 { background:#9daddb }
+  .color0 { background:#8d9dcb }
+  .color1 { background:#89bccb }
+  .color2 { background:#56e3e7 }
+  .color3 { background:#32cd70 }
+  .color4 { background:#a3d53c }
+  .color5 { background:#c4cb34 }
+  .color6 { background:#dcb66d }
+  .color7 { background:#cda59e }
+  .color8 { background:#be9d9c }
+  .color9 { background:#cf947a }
+  #commands {
+    font-size:10pt;
+    padding:10px;
+    margin-left:11px;
+    margin-bottom:0px;
+    margin-top:0px;
+    background:#708090;
+    border-top:1px solid #cccccc;
+    border-left:1px solid #cccccc;
+    border-bottom:none;
+  }
+  #titlebar {
+    font-size:10pt;
+    padding:10px;
+    margin-left:11px;
+    margin-bottom:0px;
+    margin-top:10px;
+    background:#8090a0;
+    border-top:1px solid #cccccc;
+    border-left:1px solid #cccccc;
+    border-bottom:none;
+  }
+  #help {
+    font-size:10pt;
+    padding:10px;
+    margin-left:11px;
+    margin-bottom:0px;
+    margin-top:0px;
+    background:#8090a0;
+    display:none;
+    border-top:1px solid #cccccc;
+    border-left:1px solid #cccccc;
+    border-bottom:none;
+  }
+  #sentinel {
+    height: 400px;
+    margin-left:11px;
+    background:#8090a0;
+    border-top:1px solid #cccccc;
+    border-left:1px solid #cccccc;
+    border-bottom:none;
+  }
+  input { margin-left:10px; }
+
+  .toggle {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAJCAMAAAD0FKf3AAAAA3NCSVQICAjb4U/gAAAAb1BMVEX///98jcR8jMV4jMB7jcR7jcR8jcT////7/f/3/P/0+vzx+v7s9vzq9Pzm8Prk7vzi7fnj5/Pc5vTb5vbg5PHW4fHV3/XS3fLM1+3K1e/G0e3EzuzCzey8x+m8xuystuSqtt98jsR8jcR7jcQAAADWswcWAAAAJXRSTlMAVVVV3e7u////////////////////////////////////////Vv4VOQAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNui8sowAAACVSURBVAiZPc/hDoIwDATgobCWgZsWgSGidOz9n9F1CPfrki+5tIqPXHSQVMVZFH8/sx/Is16X9zR2vtQPAMC6LxVnco5Dpvtt40QRGrspnueBqDUcdmrEMILtknkiQkQOU5RAsn9RPGRKNkLOxiibIEauNSYZy2CNyerGRngtsilkiLXP9Cx1bzuAZU13Himq/a3rWX4VVRPEuDWiLQAAAABJRU5ErkJggg==) no-repeat left center;
+    float:left;
+    width:9px;
+    height:9px;
+    margin:2px 1px 1px 1px;
+  }
+
+  .toggle.minus {
+    background-position: -9px 0;
+  }
+
+  .toggle.plus {
+    background-position: -18px 0;
+  }
+
+-->
+</style>
+<script type="text/javascript">
+  /*
+   Copyright (C) 2005,2009  Stefan Kaes
+   skaes@railsexpress.de
+   */
+
+  function rootNode() {
+    return currentThread;
+  }
+
+  function showUL(node, show) {
+    var lis = node.childNodes;
+    var l = lis.length;
+    for (var i=0; i < l ; i++ ) {
+      toggle(lis[i], show);
+    }
+  }
+
+  function findUlChild(li){
+    var ul = li.childNodes[2];
+    while (ul && ul.nodeName != "UL") {
+      ul = ul.nextSibling;
+    }
+    return ul;
+  }
+
+  function isLeafNode(li) {
+    var img = li.firstChild;
+    return (img.className.indexOf('empty') > -1);
+  }
+
+  function toggle(li, show) {
+    if (isLeafNode(li))
+      return;
+
+    var img = li.firstChild;
+    img.className = 'toggle ';
+    img.className += show ? 'minus' : 'plus';
+
+    var ul = findUlChild(li);
+    if (ul) {
+      ul.style.display = show ? 'block' : 'none';
+      showUL(ul, true);
+    }
+  }
+
+  function toggleLI(li) {
+    var img = li.firstChild;
+    if (img.className.indexOf("minus")>-1)
+      toggle(li, false);
+    else {
+      if (img.className.indexOf("plus")>-1)
+        toggle(li, true);
+    }
+  }
+
+  function aboveThreshold(text, threshold) {
+    var match = text.match(/\d+[.,]\d+/);
+    return (match && parseFloat(match[0].replace(/,/, '.'))>=threshold);
+  }
+
+  function setThresholdLI(li, threshold) {
+    var img = li.firstChild;
+    var text = img.nextSibling.firstChild;
+    var ul = findUlChild(li);
+
+    var visible = aboveThreshold(text.nodeValue, threshold) ? 1 : 0;
+
+    var count = 0;
+    if (ul) {
+      count = setThresholdUL(ul, threshold);
+    }
+    if (count>0) {
+      img.className = 'toggle minus';
+    }
+    else {
+      img.className = 'toggle empty';
+    }
+    if (visible) {
+      li.style.display = 'block'
+    }
+    else {
+      li.style.display = 'none'
+    }
+    return visible;
+  }
+
+  function setThresholdUL(node, threshold) {
+    var lis = node.childNodes;
+    var l = lis.length;
+
+    var count = 0;
+    for ( var i = 0; i < l ; i++ ) {
+      count = count + setThresholdLI(lis[i], threshold);
+    }
+
+    var visible = (count > 0) ? 1 : 0;
+    if (visible) {
+      node.style.display = 'block';
+    }
+    else {
+      node.style.display = 'none';
+    }
+    return visible;
+  }
+
+  function toggleChildren(img, event) {
+    event.cancelBubble=true;
+    if (img.className.indexOf('empty') > -1)
+      return;
+
+    var minus = (img.className.indexOf('minus') > -1);
+
+    if (minus) {
+      img.className = 'toggle plus';
+    }
+    else
+      img.className = 'toggle minus';
+
+    var li = img.parentNode;
+    var ul = findUlChild(li);
+    if (ul) {
+      if (minus)
+        ul.style.display = 'none';
+      else
+        ul.style.display = 'block';
+    }
+    if (minus)
+      moveSelectionIfNecessary(li);
+  }
+
+  function showChildren(li) {
+    var img = li.firstChild;
+    if (img.className.indexOf('empty') > -1)
+      return;
+    img.className = 'toggle minus';
+
+    var ul = findUlChild(li);
+    if (ul) {
+      ul.style.display = 'block';
+    }
+  }
+
+  function setThreshold() {
+    var tv = document.getElementById("threshold").value;
+    if (tv.match(/[0-9]+([.,][0-9]+)?/)) {
+      var f = parseFloat(tv.replace(/,/, '.'));
+      var threads = document.getElementsByName("thread");
+      var l = threads.length;
+      for ( var i = 0; i < l ; i++ ) {
+        setThresholdUL(threads[i], f);
+      }
+      var p = selectedNode;
+      while (p && p.style.display=='none')
+        p=p.parentNode.parentNode;
+      if (p && p.nodeName=="LI")
+        selectNode(p);
+    }
+    else {
+      alert("Please specify a decimal number as threshold value!");
+    }
+  }
+
+  function expandAll(event) {
+    toggleAll(event, true);
+  }
+
+  function collapseAll(event) {
+    toggleAll(event, false);
+    selectNode(rootNode(), null);
+  }
+
+  function toggleAll(event, show) {
+    event.cancelBubble=true;
+    var threads = document.getElementsByName("thread");
+    var l = threads.length;
+    for ( var i = 0; i < l ; i++ ) {
+      showUL(threads[i], show);
+    }
+  }
+
+  function toggleHelp(node) {
+    var help = document.getElementById("help");
+    if (node.value == "Show Help") {
+      node.value = "Hide Help";
+      help.style.display = 'block';
+    }
+    else {
+      node.value = "Show Help";
+      help.style.display = 'none';
+    }
+  }
+
+  var selectedNode = null;
+  var selectedColor = null;
+  var selectedThread = null;
+
+  function descendentOf(a,b){
+    while (a!=b && b!=null)
+      b=b.parentNode;
+    return (a==b);
+  }
+
+  function moveSelectionIfNecessary(node){
+    if (descendentOf(node, selectedNode))
+      selectNode(node, null);
+  }
+
+  function selectNode(node, event) {
+    if (event) {
+      event.cancelBubble = true;
+      thread = findThread(node);
+      selectThread(thread);
+    }
+    if (selectedNode) {
+      selectedNode.style.background = selectedColor;
+    }
+    selectedNode = node;
+    selectedColor = node.style.background;
+    selectedNode.style.background = "red";
+    selectedNode.scrollIntoView();
+    window.scrollBy(0,-400);
+  }
+
+  function moveUp(){
+    move(selectedNode.previousSibling);
+  }
+
+  function moveDown(){
+    move(selectedNode.nextSibling);
+  }
+
+  function move(p) {
+    while (p && p.style.display == 'none')
+      p = p.nextSibling;
+    if (p && p.nodeName == "LI") {
+      selectNode(p, null);
+    }
+  }
+
+  function moveLeft(){
+    var p = selectedNode.parentNode.parentNode;
+    if (p && p.nodeName=="LI") {
+      selectNode(p, null);
+    }
+  }
+
+  function moveRight(){
+    if (!isLeafNode(selectedNode)) {
+      showChildren(selectedNode);
+      var ul = findUlChild(selectedNode);
+      if (ul) {
+        selectNode(ul.firstChild, null);
+      }
+    }
+  }
+
+  function moveForward(){
+    if (isLeafNode(selectedNode)) {
+      var p = selectedNode;
+      while ((p.nextSibling == null || p.nextSibling.style.display=='none') && p.nodeName=="LI") {
+        p = p.parentNode.parentNode;
+      }
+      if (p.nodeName=="LI")
+        selectNode(p.nextSibling, null);
+    }
+    else {
+      moveRight();
+    }
+  }
+
+  function isExpandedNode(li){
+    var img = li.firstChild;
+    return(img.className.indexOf('minus')>-1);
+  }
+
+  function moveBackward(){
+    var p = selectedNode;
+    var q = p.previousSibling;
+    while (q != null && q.style.display=='none')
+      q = q.previousSibling;
+    if (q == null) {
+      p = p.parentNode.parentNode;
+    } else {
+      while (!isLeafNode(q) && isExpandedNode(q)) {
+        q = findUlChild(q).lastChild;
+        while (q.style.display=='none')
+          q = q.previousSibling;
+      }
+      p = q;
+    }
+    if (p.nodeName=="LI")
+      selectNode(p, null);
+  }
+
+  function moveHome() {
+    selectNode(currentThread);
+  }
+
+  var currentThreadIndex = null;
+
+  function findThread(node){
+    while (node && !node.parentNode.nodeName.match(/BODY|DIV/g)) {
+      node = node.parentNode;
+    }
+    return node.firstChild;
+  }
+
+  function selectThread(node){
+    var threads = document.getElementsByName("thread");
+    currentThread = node;
+    for (var i=0; i<threads.length; i++) {
+      if (threads[i]==currentThread.parentNode)
+        currentThreadIndex = i;
+    }
+  }
+
+  function nextThread(){
+    var threads = document.getElementsByName("thread");
+    if (currentThreadIndex==threads.length-1)
+      currentThreadIndex = 0;
+    else
+      currentThreadIndex += 1
+    currentThread = threads[currentThreadIndex].firstChild;
+    selectNode(currentThread, null);
+  }
+
+  function previousThread(){
+    var threads = document.getElementsByName("thread");
+    if (currentThreadIndex==0)
+      currentThreadIndex = threads.length-1;
+    else
+      currentThreadIndex -= 1
+    currentThread = threads[currentThreadIndex].firstChild;
+    selectNode(currentThread, null);
+  }
+
+  function switchThread(node, event){
+    event.cancelBubble = true;
+    selectThread(node.nextSibling.firstChild);
+    selectNode(currentThread, null);
+  }
+
+  function handleKeyEvent(event){
+    var code = event.charCode ? event.charCode : event.keyCode;
+    var str = String.fromCharCode(code);
+    switch (str) {
+      case "a": moveLeft();  break;
+      case "s": moveDown();  break;
+      case "d": moveRight(); break;
+      case "w": moveUp();    break;
+      case "f": moveForward(); break;
+      case "b": moveBackward(); break;
+      case "x": toggleChildren(selectedNode.firstChild, event); break;
+      case "*": toggleLI(selectedNode); break;
+      case "n": nextThread(); break;
+      case "h": moveHome(); break;
+      case "p": previousThread(); break;
+    }
+  }
+  document.onkeypress=function(event){ handleKeyEvent(event) };
+
+  window.onload=function(){
+    var images = document.querySelectorAll(".toggle");
+    for (var i=0; i<images.length; i++) {
+      var img = images[i];
+        img.onclick = function(event){ toggleChildren(this, event); return false; };
+    }
+    var divs = document.getElementsByTagName("div");
+    for (i=0; i<divs.length; i++) {
+      var div = divs[i];
+      if (div.className == "thread")
+        div.onclick = function(event){ switchThread(this, event) };
+    }
+    var lis = document.getElementsByTagName("li");
+    for (var i=0; i<lis.length; i++) {
+      lis[i].onclick = function(event){ selectNode(this, event); };
+    }
+    var threads = document.getElementsByName("thread");;
+    currentThreadIndex = 0;
+    currentThread = threads[0].firstChild;
+    selectNode(currentThread, null);
+  };
+
+</script>
+</head><body><div style="display: inline-block;">
+<div id="titlebar">
+Call tree for application <b>/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/bin/puma -p 4321 -t 1:1 --tag puma_rsb_rails_41417</b><br/>
+Generated on 2019-05-15 16:45:00 +0100 with options {:path=&gt;&quot;/tmp/profile&quot;, :max_requests=&gt;10000, :min_percent=&gt;1}<br/>
+</div>
+<div id="commands">
+<span style="font-size: 11pt; font-weight: bold;">Threshold:</span>
+<input value="1.0" size="3" id="threshold" type="text">
+<input value="Apply" onclick="setThreshold();" type="submit">
+<input value="Expand All" onclick="expandAll(event);" type="submit">
+<input value="Collapse All" onclick="collapseAll(event);" type="submit">
+<input value="Show Help" onclick="toggleHelp(this);" type="submit">
+</div>
+<div style="display: none;" id="help">
+&#8226; Enter a decimal value <i>d</i> into the threshold field and click "Apply"
+        to hide all nodes marked with time values lower than <i>d</i>.<br>
+&#8226; Click on "Expand All" for full tree expansion.<br>
+&#8226; Click on "Collapse All" to show only top level nodes.<br>
+&#8226; Use a, s, d, w as in Quake or Urban Terror to navigate the tree.<br>
+&#8226; Use f and b to navigate the tree in preorder forward and backwards.<br>
+&#8226; Use x to toggle visibility of a subtree.<br>
+&#8226; Use * to expand/collapse a whole subtree.<br>
+&#8226; Use h to navigate to thread root.<br>
+&#8226; Use n and p to navigate between threads.<br>
+&#8226; Click on background to move focus to a subtree.<br>
+</div>
+<div class="thread">Thread: 70240027139100, Fiber: 70240027136860 (31.34% ~ 39.792399644851685)</div><ul name="thread"><li class="color9" style="display:block"><a href="#" class="toggle minus" ></a><span> 99.98% (99.98%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb&line=86">Puma::ThreadPool#spawn_thread</a> [1 calls, 1 total]</span>
+<ul><li class="color9" style="display:block"><a href="#" class="toggle minus" ></a><span> 99.98% (100.00%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=453">Puma::Server#process_client</a> [10 calls, 11 total]</span>
+<ul><li class="color9" style="display:block"><a href="#" class="toggle minus" ></a><span> 92.32% (92.33%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=654">Puma::Server#handle_request</a> [346636 calls, 346637 total]</span>
+<ul><li class="color6" style="display:block"><a href="#" class="toggle minus" ></a><span> 64.61% (69.98%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/configuration.rb&line=224">Puma::Configuration::ConfigMiddleware#call</a> [346636 calls, 346636 total]</span>
+<ul><li class="color6" style="display:block"><a href="#" class="toggle minus" ></a><span> 64.49% (99.82%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/ruby-prof-0.17.0/lib/ruby-prof/rack.rb&line=28">Rack::RubyProf#call</a> [346636 calls, 346637 total]</span>
+<ul><li class="color5" style="display:block"><a href="#" class="toggle minus" ></a><span> 58.03% (89.98%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb&line=163">Rails::Application#call</a> [346636 calls, 346637 total]</span>
+<ul><li class="color5" style="display:block"><a href="#" class="toggle minus" ></a><span> 52.70% (90.82%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/engine.rb&line=514">Rails::Engine#call</a> [346636 calls, 346637 total]</span>
+<ul><li class="color5" style="display:block"><a href="#" class="toggle minus" ></a><span> 52.24% (99.12%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb&line=245">Rails::Application#env_config</a> [346636 calls, 346637 total]</span>
+<ul><li class="color5" style="display:block"><a href="#" class="toggle minus" ></a><span> 51.50% (98.59%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb&line=529">Rails::Application#validate_secret_key_config!</a> [346636 calls, 346637 total]</span>
+<ul><li class="color3" style="display:block"><a href="#" class="toggle minus" ></a><span> 38.56% (74.87%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/instance_delegator.rb&line=19">&lt;Class::ActiveSupport::Deprecation&gt;#warn</a> [346636 calls, 346637 total]</span>
+<ul><li class="color3" style="display:block"><a href="#" class="toggle minus" ></a><span> 37.25% (96.61%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb&line=15">ActiveSupport::Deprecation::Reporting#warn</a> [346636 calls, 346637 total]</span>
+<ul><li class="color2" style="display:block"><a href="#" class="toggle minus" ></a><span> 22.90% (61.48%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb&line=65">ActiveSupport::Deprecation::Reporting#deprecation_message</a> [346636 calls, 346637 total]</span>
+<ul><li class="color1" style="display:block"><a href="#" class="toggle minus" ></a><span> 19.71% (86.06%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb&line=71">ActiveSupport::Deprecation::Reporting#deprecation_caller_message</a> [346636 calls, 346637 total]</span>
+<ul><li class="color1" style="display:block"><a href="#" class="toggle minus" ></a><span> 17.58% (89.21%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb&line=82">ActiveSupport::Deprecation::Reporting#extract_callstack</a> [346636 calls, 346637 total]</span>
+<ul><li class="color01" style="display:block"><a href="#" class="toggle empty" ></a><span> 5.97% (33.93%) &lt;Class::File&gt;#expand_path [346636 calls, 346637 total]</span>
+</li><li class="color01" style="display:block"><a href="#" class="toggle plus" ></a><span> 5.20% (29.56%) Enumerable#find [346636 calls, 346637 total]</span>
+<ul style="display:none"><li class="color01" style="display:block"><a href="#" class="toggle plus" ></a><span> 4.49% (86.39%) Array#each [346636 calls, 1386548 total]</span>
+<ul style="display:none"><li class="color01" style="display:block"><a href="#" class="toggle empty" ></a><span> 1.36% (30.20%) String#start_with? [3466360 calls, 3466370 total]</span>
+</li></ul></li></ul></li><li class="color01" style="display:block"><a href="#" class="toggle plus" ></a><span> 3.25% (18.50%) String#match [346636 calls, 346637 total]</span>
+<ul style="display:none"><li class="color01" style="display:block"><a href="#" class="toggle empty" ></a><span> 2.65% (81.56%) Regexp#match [346636 calls, 346637 total]</span>
+</li></ul></li><li class="color01" style="display:block"><a href="#" class="toggle empty" ></a><span> 1.08% (6.13%) MatchData#captures [346636 calls, 346637 total]</span>
+</li></ul></li></ul></li></ul></li><li class="color05" style="display:block"><a href="#" class="toggle empty" ></a><span> 7.46% (20.03%) Kernel#caller [346636 calls, 346637 total]</span>
+</li><li class="color01" style="display:block"><a href="#" class="toggle plus" ></a><span> 5.73% (15.38%) Kernel#tap [346636 calls, 346637 total]</span>
+<ul style="display:none"><li class="color01" style="display:block"><a href="#" class="toggle plus" ></a><span> 4.63% (80.89%) Array#each [346636 calls, 1386548 total]</span>
+<ul style="display:none"><li class="color01" style="display:block"><a href="#" class="toggle plus" ></a><span> 3.30% (71.16%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/notifications.rb&line=163">&lt;Module::ActiveSupport::Notifications&gt;#instrument</a> [346636 calls, 346637 total]</span>
+<ul style="display:none"><li class="color01" style="display:block"><a href="#" class="toggle plus" ></a><span> 2.28% (69.27%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/notifications/fanout.rb&line=62">ActiveSupport::Notifications::Fanout#listening?</a> [346636 calls, 346637 total]</span>
+<ul style="display:none"><li class="color01" style="display:block"><a href="#" class="toggle plus" ></a><span> 1.61% (70.33%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/notifications/fanout.rb&line=55">ActiveSupport::Notifications::Fanout#listeners_for</a> [346636 calls, 346637 total]</span>
+<ul style="display:none"><li class="color01" style="display:block"><a href="#" class="toggle empty" ></a><span> 1.09% (67.96%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/thread_safe-0.3.6/lib/thread_safe/cache.rb&line=36">ThreadSafe::Cache#[]</a> [346636 calls, 346638 total]</span>
+<ul style="display:none"></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li><li class="color01" style="display:block"><a href="#" class="toggle plus" ></a><span> 5.10% (9.91%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/ordered_options.rb&line=30">ActiveSupport::OrderedOptions#method_missing</a> [693272 calls, 693274 total]</span>
+<ul style="display:none"><li class="color01" style="display:block"><a href="#" class="toggle empty" ></a><span> 1.60% (31.25%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/ordered_options.rb&line=26">ActiveSupport::OrderedOptions#[]</a> [693272 calls, 693274 total]</span>
+<ul style="display:none"></ul></li></ul></li><li class="color01" style="display:block"><a href="#" class="toggle empty" ></a><span> 1.25% (2.43%) Kernel#raise [346636 calls, 346650 total]</span>
+<ul style="display:none"></ul></li></ul></li></ul></li></ul></li><li class="color01" style="display:block"><a href="#" class="toggle plus" ></a><span> 3.85% (6.63%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb&line=517">Rails::Application#build_original_fullpath</a> [346636 calls, 346637 total]</span>
+<ul style="display:none"><li class="color01" style="display:block"><a href="#" class="toggle plus" ></a><span> 2.35% (61.10%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/core_ext/object/blank.rb&line=24">Object#present?</a> [346636 calls, 346637 total]</span>
+<ul style="display:none"><li class="color01" style="display:block"><a href="#" class="toggle plus" ></a><span> 1.86% (78.95%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/core_ext/object/blank.rb&line=117">String#blank?</a> [346636 calls, 346637 total]</span>
+<ul style="display:none"><li class="color01" style="display:block"><a href="#" class="toggle empty" ></a><span> 1.48% (79.69%) Regexp#=== [346636 calls, 346637 total]</span>
+</li></ul></li></ul></li></ul></li></ul></li><li class="color01" style="display:block"><a href="#" class="toggle empty" ></a><span> 1.91% (2.96%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/ruby-prof-0.17.0/lib/ruby-prof/rack.rb&line=144">Rack::RubyProf#profiler</a> [693272 calls, 693273 total]</span>
+<ul style="display:none"></ul></li></ul></li></ul></li><li class="color01" style="display:block"><a href="#" class="toggle plus" ></a><span> 5.55% (6.01%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/events.rb&line=111">Puma::Events#unknown_error</a> [346636 calls, 346637 total]</span>
+<ul style="display:none"><li class="color01" style="display:block"><a href="#" class="toggle empty" ></a><span> 1.10% (19.82%) Exception#inspect [346636 calls, 346637 total]</span>
+<ul style="display:none"></ul></li></ul></li><li class="color01" style="display:block"><a href="#" class="toggle empty" ></a><span> 3.36% (3.64%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=517">Puma::Server#normalize_env</a> [346636 calls, 346636 total]</span>
+<ul style="display:none"></ul></li><li class="color01" style="display:block"><a href="#" class="toggle empty" ></a><span> 1.62% (1.75%) Array#each [693272 calls, 1386548 total]</span>
+<ul style="display:none"></ul></li><li class="color01" style="display:block"><a href="#" class="toggle empty" ></a><span> 1.39% (1.51%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=862">Puma::Server#lowlevel_error</a> [346636 calls, 346637 total]</span>
+<ul style="display:none"></ul></li><li class="color01" style="display:block"><a href="#" class="toggle empty" ></a><span> 1.14% (1.23%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/core_ext/numeric/conversions.rb&line=132">Integer#to_s</a> [693272 calls, 1386548 total]</span>
+<ul style="display:none"></ul></li></ul></li><li class="color01" style="display:block"><a href="#" class="toggle plus" ></a><span> 5.96% (5.97%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb&line=85">Puma::Client#reset</a> [346635 calls, 346636 total]</span>
+<ul style="display:none"><li class="color01" style="display:block"><a href="#" class="toggle plus" ></a><span> 3.43% (57.44%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb&line=277">Puma::Client#try_to_finish</a> [346635 calls, 346647 total]</span>
+<ul style="display:none"><li class="color01" style="display:block"><a href="#" class="toggle empty" ></a><span> 1.57% (45.89%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb&line=220">Puma::Client#setup_body</a> [346626 calls, 346635 total]</span>
+<ul style="display:none"></ul></li></ul></li></ul></li></ul></li></ul></li></ul><div class="thread">Thread: 70240027138300, Fiber: 70240027251420 (19.09% ~ 24.235650777816772)</div><ul name="thread"><li class="color9" style="display:block"><a href="#" class="toggle minus" ></a><span> 100.00% (100.00%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=359">Puma::Server#handle_servers</a> [1 calls, 1 total]</span>
+<ul><li class="color9" style="display:block"><a href="#" class="toggle minus" ></a><span> 100.00% (100.00%) Array#each [13 calls, 16 total]</span>
+<ul><li class="color9" style="display:block"><a href="#" class="toggle minus" ></a><span> 100.00% (100.00%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb&line=157">Puma::ThreadPool#wait_until_not_full</a> [12 calls, 12 total]</span>
+<ul><li class="color9" style="display:block"><a href="#" class="toggle minus" ></a><span> 100.00% (100.00%) Thread::Mutex#synchronize [12 calls, 25 total]</span>
+<ul><li class="color9" style="display:block"><a href="#" class="toggle minus" ></a><span> 100.00% (100.00%) Thread::ConditionVariable#wait [3 calls, 3 total]</span>
+<ul><li class="color9" style="display:block"><a href="#" class="toggle empty" ></a><span> 100.00% (100.00%) Thread::Mutex#sleep [3 calls, 3 total]</span>
+</li></ul></li></ul></li></ul></li></ul></li></ul></li></ul><div class="thread">Thread: 70240027138800, Fiber: 70240027249940 (19.09% ~ 24.235711336135864)</div><ul name="thread"><li class="color9" style="display:block"><a href="#" class="toggle minus" ></a><span> 100.00% (100.00%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/reactor.rb&line=42">Puma::Reactor#run_internal</a> [1 calls, 1 total]</span>
+<ul><li class="color9" style="display:block"><a href="#" class="toggle empty" ></a><span> 100.00% (100.00%) &lt;Class::IO&gt;#select [5 calls, 5 total]</span>
+</li></ul></li></ul><div class="thread">Thread: 70240027138620, Fiber: 70240025305040 (18.89% ~ 23.97717809677124)</div><ul name="thread"><li class="color9" style="display:block"><a href="#" class="toggle minus" ></a><span> 100.00% (100.00%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb&line=243">Puma::ThreadPool::Reaper#start!</a> [1 calls, 1 total]</span>
+<ul><li class="color9" style="display:block"><a href="#" class="toggle empty" ></a><span> 100.00% (100.00%) Kernel#sleep [75 calls, 75 total]</span>
+</li></ul></li></ul><div class="thread">Thread: 70240027138460, Fiber: 70240031097160 (11.59% ~ 14.717183351516724)</div><ul name="thread"><li class="color9" style="display:block"><a href="#" class="toggle minus" ></a><span> 100.00% (100.00%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb&line=214">Puma::ThreadPool::AutoTrim#start!</a> [1 calls, 1 total]</span>
+<ul><li class="color9" style="display:block"><a href="#" class="toggle empty" ></a><span> 100.00% (100.00%) Kernel#sleep [2 calls, 2 total]</span>
+</li></ul></li></ul><div class="thread">Thread: 70240012795860, Fiber: 70240027422960 (0.00% ~ 0.00035381317138671875)</div><ul name="thread"><li class="color8" style="display:block"><a href="#" class="toggle empty" ></a><span> 86.99% (86.99%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/launcher.rb&line=420">Puma::Launcher#setup_signals</a> [1 calls, 1 total]</span>
+<ul></ul></li><li class="color05" style="display:block"><a href="#" class="toggle plus" ></a><span> 7.61% (7.61%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/launcher.rb&line=186">Puma::Launcher#run</a> [1 calls, 1 total]</span>
+<ul style="display:none"><li class="color05" style="display:block"><a href="#" class="toggle plus" ></a><span> 7.61% (100.00%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/launcher.rb&line=292">Puma::Launcher#graceful_stop</a> [1 calls, 1 total]</span>
+<ul style="display:none"><li class="color01" style="display:block"><a href="#" class="toggle plus" ></a><span> 4.58% (60.18%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/single.rb&line=26">Puma::Single#stop_blocked</a> [1 calls, 1 total]</span>
+<ul style="display:none"><li class="color01" style="display:block"><a href="#" class="toggle plus" ></a><span> 3.77% (82.35%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=947">Puma::Server#stop</a> [1 calls, 2 total]</span>
+<ul style="display:none"><li class="color01" style="display:block"><a href="#" class="toggle plus" ></a><span> 3.44% (91.07%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=928">Puma::Server#notify_safely</a> [1 calls, 2 total]</span>
+<ul style="display:none"><li class="color01" style="display:block"><a href="#" class="toggle plus" ></a><span> 1.68% (49.02%) IO#&lt;&lt; [1 calls, 2 total]</span>
+<ul style="display:none"><li class="color01" style="display:block"><a href="#" class="toggle empty" ></a><span> 1.68% (100.00%) IO#write [1 calls, 5 total]</span>
+<ul style="display:none"></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li><li class="color01" style="display:block"><a href="#" class="toggle plus" ></a><span> 5.39% (5.39%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.5/lib/concurrent/utility/at_exit.rb&line=49">Concurrent::AtExitImplementation#install</a> [1 calls, 1 total]</span>
+<ul style="display:none"><li class="color01" style="display:block"><a href="#" class="toggle empty" ></a><span> 1.68% (31.25%) <a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.5/lib/concurrent/utility/at_exit.rb&line=88">Concurrent::AtExitImplementation#runner</a> [1 calls, 1 total]</span>
+<ul style="display:none"></ul></li></ul></li></ul><div id="sentinel"></div></div></body></html>

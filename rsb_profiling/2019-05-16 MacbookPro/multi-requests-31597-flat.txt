@@ -1,0 +1,80 @@
+Measure Mode: wall_time
+Thread ID: 70113887854460
+Fiber ID: 70113887852220
+Total: 4.032840
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name
+ 14.67      3.708     0.592     0.000     3.117    31597   Puma::Server#handle_request
+  7.32      0.295     0.295     0.000     0.000    31597   Kernel#caller
+  5.78      0.233     0.233     0.000     0.000    31597   <Class::File>#expand_path
+  5.15      0.419     0.208     0.000     0.211   126388   Array#each
+  4.83      2.025     0.195     0.000     1.830    31597   Rails::Application#validate_secret_key_config!
+  3.38      0.136     0.136     0.000     0.000    31596   Puma::Server#normalize_env
+  3.36      0.234     0.136     0.000     0.099    31597   Puma::Events#unknown_error
+  3.29      0.891     0.133     0.000     0.758    31597   ActiveSupport::Deprecation::Reporting#deprecation_message
+  2.59      0.105     0.105     0.000     0.000    31597   Regexp#match
+  2.54      0.244     0.102     0.000     0.142    31596   Puma::Client#reset
+  2.48      0.213     0.100     0.000     0.113    63194   ActiveSupport::OrderedOptions#method_missing
+  2.11      0.758     0.085     0.000     0.673    31597   ActiveSupport::Deprecation::Reporting#deprecation_caller_message
+  2.00      2.531     0.081     0.000     2.451    31597   Rack::RubyProf#call
+  1.90      4.029     0.076     0.000     3.953        3   Puma::Server#process_client
+  1.84      0.673     0.074     0.000     0.599    31597   ActiveSupport::Deprecation::Reporting#extract_callstack
+  1.58      0.064     0.064     0.000     0.000    63194   Puma::Server#fast_write
+  1.55      0.062     0.062     0.000     0.000    31597   Regexp#===
+  1.54      0.132     0.062     0.000     0.070    31598   Puma::Client#try_to_finish
+  1.48      0.060     0.060     0.000     0.000    31595   Puma::Client#setup_body
+  1.47      0.156     0.059     0.000     0.096    31597   Rails::Application#build_original_fullpath
+  1.41      2.282     0.057     0.000     2.225    31597   Rails::Application#call
+  1.33      0.053     0.053     0.000     0.000   315970   String#start_with?
+  1.27      0.077     0.051     0.000     0.026    63193   Rack::RubyProf#profiler
+  1.12      0.045     0.045     0.000     0.000    31597   Exception#inspect
+  1.12      0.045     0.045     0.000     0.000    31597   MatchData#captures
+  1.09      1.452     0.044     0.000     1.409    31597   ActiveSupport::Deprecation::Reporting#warn
+
+* indicates recursively called methods
+Measure Mode: wall_time
+Thread ID: 70113887853660
+Fiber ID: 70113910912540
+Total: 2.392059
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name
+
+* indicates recursively called methods
+Measure Mode: wall_time
+Thread ID: 70113887854160
+Fiber ID: 70113910911300
+Total: 2.392357
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name
+
+* indicates recursively called methods
+Measure Mode: wall_time
+Thread ID: 70113887854000
+Fiber ID: 70113878866760
+Total: 2.199427
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name
+
+* indicates recursively called methods
+Measure Mode: wall_time
+Thread ID: 70113877499920
+Fiber ID: 70113887257720
+Total: 0.003368
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name
+
+* indicates recursively called methods
+Measure Mode: wall_time
+Thread ID: 70113887853820
+Fiber ID: 70113878817280
+Total: 0.000000
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name
+
+* indicates recursively called methods

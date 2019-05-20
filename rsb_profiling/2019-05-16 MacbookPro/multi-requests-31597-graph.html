@@ -1,0 +1,4015 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <style media="all" type="text/css">
+    table {
+      border-collapse: collapse;
+      border: 1px solid #CCC;
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+      font-size: 9pt;
+      line-height: normal;
+      width: 100%;
+    }
+
+    th {
+      text-align: center;
+      border-top: 1px solid #FB7A31;
+      border-bottom: 1px solid #FB7A31;
+      background: #FFC;
+      padding: 0.3em;
+      border-left: 1px solid silver;
+    }
+
+    tr.break td {
+      border: 0;
+      border-top: 1px solid #FB7A31;
+      padding: 0;
+      margin: 0;
+    }
+
+    tr.method td {
+      font-weight: bold;
+    }
+
+    td {
+      padding: 0.3em;
+    }
+
+    td:first-child {
+      width: 190px;
+      }
+
+    td {
+      border-left: 1px solid #CCC;
+      text-align: center;
+    }
+
+    .method_name {
+      text-align: left;
+    }
+
+    tfoot td {
+      text-align: left;
+    }
+  </style>
+  </head>
+  <body>
+    <h1>Profile Report: wall_time</h1>
+    <!-- Threads Table -->
+    <table>
+      <tr>
+        <th>Thread ID</th>
+        <th>Fiber ID</th>
+        <th>Total Time</th>
+      </tr>
+
+      <tr>
+        <td>70113887854460</td>
+        <td><a href="#70113887852220">70113887852220</a></td>
+        <td>4.032840251922607</td>
+      </tr>
+
+      <tr>
+        <td>70113887853660</td>
+        <td><a href="#70113910912540">70113910912540</a></td>
+        <td>2.3920586109161377</td>
+      </tr>
+
+      <tr>
+        <td>70113887854160</td>
+        <td><a href="#70113910911300">70113910911300</a></td>
+        <td>2.392357349395752</td>
+      </tr>
+
+      <tr>
+        <td>70113887854000</td>
+        <td><a href="#70113878866760">70113878866760</a></td>
+        <td>2.1994271278381348</td>
+      </tr>
+
+      <tr>
+        <td>70113877499920</td>
+        <td><a href="#70113887257720">70113887257720</a></td>
+        <td>0.0033676624298095703</td>
+      </tr>
+
+      <tr>
+        <td>70113887853820</td>
+        <td><a href="#70113878817280">70113878817280</a></td>
+        <td>0</td>
+      </tr>
+
+    </table>
+    <!-- Methods Tables -->
+
+      <h2><a name="70113887852220">Thread 70113887854460, Fiber: 70113887852220</a></h2>
+      <table>
+        <thead>
+          <tr>
+            <th>%Total</th>
+            <th>%Self</th>
+            <th>Total</th>
+            <th>Self</th>
+            <th>Wait</th>
+            <th>Child</th>
+            <th>Calls</th>
+            <th class="method_name">Name</th>
+            <th>Line</th>
+          </tr>
+        </thead>
+        <tbody>
+
+               <!-- Parents -->
+
+               <tr class="method">
+                 <td>99.92%</td>
+                 <td>0.00%</td>
+                 <td>4.03</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>4.03</td>
+                 <td>1</td>
+                 <td class="method_name">
+                   <a name="Puma__ThreadPool_spawn_thread_70113887852220">
+                      Puma::ThreadPool#spawn_thread
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb&line=86"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb:86">86</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>4.03</td>
+                   <td>0.08</td>
+                   <td>0.00</td>
+                   <td>3.95</td>
+                   <td>2/3</td>
+                   <td class="method_name"><a href="#Puma__Server_process_client_70113887852220">Puma::Server#process_client</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb&line=306"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb:306">306</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>1/1</td>
+                   <td class="method_name">Puma::Client#set_timeout</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb&line=308"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb:308">308</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>4/4</td>
+                   <td class="method_name">Puma::Client#eagerly_finish</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb&line=284"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb:284">284</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>6/9</td>
+                   <td class="method_name">Thread::Mutex#synchronize</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb&line=126"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb:126">126</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>1/1</td>
+                   <td class="method_name">Puma::Reactor#add</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb&line=309"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb:309">309</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>1/4</td>
+                   <td class="method_name">Puma::Client#close</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb&line=303"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb:303">303</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>3/63204</td>
+                   <td class="method_name">Module#===</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb&line=284"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb:284">284</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>4/4</td>
+                   <td class="method_name">Thread#[]=</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb&line=278"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb:278">278</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>4/4</td>
+                   <td class="method_name">&lt;Class::Thread&gt;#current</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb&line=278"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb:278">278</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>4.03</td>
+                   <td>0.08</td>
+                   <td>0.00</td>
+                   <td>3.95</td>
+                   <td>2/3</td>
+                   <td class="method_name"><a href="#Puma__ThreadPool_spawn_thread_70113887852220">Puma::ThreadPool#spawn_thread</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb&line=306"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb:306">306</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>99.91%</td>
+                 <td>1.90%</td>
+                 <td>4.03</td>
+                 <td>0.08</td>
+                 <td>0.00</td>
+                 <td>3.95</td>
+                 <td>3</td>
+                 <td class="method_name">
+                   <a name="Puma__Server_process_client_70113887852220">
+                      Puma::Server#process_client
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=453"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:453">453</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>3.71</td>
+                   <td>0.59</td>
+                   <td>0.00</td>
+                   <td>3.12</td>
+                   <td>31596/31597</td>
+                   <td class="method_name"><a href="#Puma__Server_handle_request_70113887852220">Puma::Server#handle_request</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=446"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:446">446</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.24</td>
+                   <td>0.10</td>
+                   <td>0.00</td>
+                   <td>0.14</td>
+                   <td>31596/31596</td>
+                   <td class="method_name"><a href="#Puma__Client_reset_70113887852220">Puma::Client#reset</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=458"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:458">458</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>3/4</td>
+                   <td class="method_name">Puma::Client#close</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=503"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:503">503</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>2/31599</td>
+                   <td class="method_name">Puma::UserFileDefaultOptions#[]</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=442"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:442">442</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>3/63204</td>
+                   <td class="method_name">Module#===</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=468"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:468">468</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31599/31599</td>
+                   <td class="method_name">Puma::IOBuffer#reset</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=500"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:500">500</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>3.71</td>
+                   <td>0.59</td>
+                   <td>0.00</td>
+                   <td>3.12</td>
+                   <td>31596/31597</td>
+                   <td class="method_name"><a href="#Puma__Server_process_client_70113887852220">Puma::Server#process_client</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=446"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:446">446</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>91.95%</td>
+                 <td>14.67%</td>
+                 <td>3.71</td>
+                 <td>0.59</td>
+                 <td>0.00</td>
+                 <td>3.12</td>
+                 <td>31597</td>
+                 <td class="method_name">
+                   <a name="Puma__Server_handle_request_70113887852220">
+                      Puma::Server#handle_request
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=654"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:654">654</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>2.54</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>2.53</td>
+                   <td>31596/31596</td>
+                   <td class="method_name"><a href="#Puma__Configuration__ConfigMiddleware_call_70113887852220">Puma::Configuration::ConfigMiddleware#call</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=632"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:632">632</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.23</td>
+                   <td>0.14</td>
+                   <td>0.00</td>
+                   <td>0.10</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#Puma__Events_unknown_error_70113887852220">Puma::Events#unknown_error</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=654"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:654">654</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.14</td>
+                   <td>0.14</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31596/31596</td>
+                   <td class="method_name"><a href="#Puma__Server_normalize_env_70113887852220">Puma::Server#normalize_env</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=589"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:589">589</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.08</td>
+                   <td>0.05</td>
+                   <td>0.00</td>
+                   <td>0.03</td>
+                   <td>63194/126388</td>
+                   <td class="method_name"><a href="#Array_each_70113887852220">Array#each</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=794"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:794">794</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.06</td>
+                   <td>0.04</td>
+                   <td>0.00</td>
+                   <td>0.02</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#Puma__Server_lowlevel_error_70113887852220">Puma::Server#lowlevel_error</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=656"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:656">656</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.03</td>
+                   <td>0.03</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>63194/126388</td>
+                   <td class="method_name">Integer#to_s</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=748"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:748">748</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.03</td>
+                   <td>0.03</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/63194</td>
+                   <td class="method_name"><a href="#Puma__Server_fast_write_70113887852220">Puma::Server#fast_write</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=757"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:757">757</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name">Puma::Server#fetch_status_code</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=683"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:683">683</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>63194/63194</td>
+                   <td class="method_name">Puma::IOBuffer#append</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=748"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:748">748</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name">String#downcase</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=673"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:673">673</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/63194</td>
+                   <td class="method_name">Hash#fetch</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=673"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:673">673</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name">Puma::Server#cork_socket</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=666"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:666">666</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/157983</td>
+                   <td class="method_name">String#bytesize</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=663"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:663">663</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name">Kernel#kind_of?</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=662"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:662">662</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>63193/63204</td>
+                   <td class="method_name">Module#===</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=765"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:765">765</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31596/31596</td>
+                   <td class="method_name">Puma::Server#closed_socket?</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=587"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:587">587</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name">Kernel#respond_to?</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=792"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:792">792</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name">Puma::NullIO#close</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=790"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:790">790</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name">Puma::Server#uncork_socket</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=788"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:788">788</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name">Puma::IOBuffer#to_s</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=757"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:757">757</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name">Puma::IOBuffer#&lt;&lt;</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=755"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:755">755</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name">Hash#each</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=709"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:709">709</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>1/10</td>
+                   <td class="method_name">&lt;Class::SystemCallError&gt;#===</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=765"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:765">765</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>2.54</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>2.53</td>
+                   <td>31596/31596</td>
+                   <td class="method_name"><a href="#Puma__Server_handle_request_70113887852220">Puma::Server#handle_request</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=632"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:632">632</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>62.87%</td>
+                 <td>0.11%</td>
+                 <td>2.54</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>2.53</td>
+                 <td>31596</td>
+                 <td class="method_name">
+                   <a name="Puma__Configuration__ConfigMiddleware_call_70113887852220">
+                      Puma::Configuration::ConfigMiddleware#call
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/configuration.rb&line=224"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/configuration.rb:224">224</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>2.53</td>
+                   <td>0.08</td>
+                   <td>0.00</td>
+                   <td>2.45</td>
+                   <td>31596/31597</td>
+                   <td class="method_name"><a href="#Rack__RubyProf_call_70113887852220">Rack::RubyProf#call</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/configuration.rb&line=225"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/configuration.rb:225">225</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>2.53</td>
+                   <td>0.08</td>
+                   <td>0.00</td>
+                   <td>2.45</td>
+                   <td>31596/31597</td>
+                   <td class="method_name"><a href="#Puma__Configuration__ConfigMiddleware_call_70113887852220">Puma::Configuration::ConfigMiddleware#call</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/configuration.rb&line=225"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/configuration.rb:225">225</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>62.77%</td>
+                 <td>2.00%</td>
+                 <td>2.53</td>
+                 <td>0.08</td>
+                 <td>0.00</td>
+                 <td>2.45</td>
+                 <td>31597</td>
+                 <td class="method_name">
+                   <a name="Rack__RubyProf_call_70113887852220">
+                      Rack::RubyProf#call
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/ruby-prof-0.17.0/lib/ruby-prof/rack.rb&line=28"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/ruby-prof-0.17.0/lib/ruby-prof/rack.rb:28">28</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>2.28</td>
+                   <td>0.06</td>
+                   <td>0.00</td>
+                   <td>2.23</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#Rails__Application_call_70113887852220">Rails::Application#call</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/ruby-prof-0.17.0/lib/ruby-prof/rack.rb&line=28"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/ruby-prof-0.17.0/lib/ruby-prof/rack.rb:28">28</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.08</td>
+                   <td>0.05</td>
+                   <td>0.00</td>
+                   <td>0.03</td>
+                   <td>63193/63193</td>
+                   <td class="method_name"><a href="#Rack__RubyProf_profiler_70113887852220">Rack::RubyProf#profiler</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/ruby-prof-0.17.0/lib/ruby-prof/rack.rb&line=30"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/ruby-prof-0.17.0/lib/ruby-prof/rack.rb:30">30</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.03</td>
+                   <td>0.02</td>
+                   <td>0.00</td>
+                   <td>0.01</td>
+                   <td>31596/31596</td>
+                   <td class="method_name">Rack::Request#path</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/ruby-prof-0.17.0/lib/ruby-prof/rack.rb&line=25"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/ruby-prof-0.17.0/lib/ruby-prof/rack.rb:25">25</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.03</td>
+                   <td>0.01</td>
+                   <td>0.00</td>
+                   <td>0.02</td>
+                   <td>31596/31596</td>
+                   <td class="method_name">Rack::RubyProf#should_profile?</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/ruby-prof-0.17.0/lib/ruby-prof/rack.rb&line=25"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/ruby-prof-0.17.0/lib/ruby-prof/rack.rb:25">25</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.01</td>
+                   <td>0.01</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31596/31597</td>
+                   <td class="method_name">Rack::RubyProf::RackProfiler#resume</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/ruby-prof-0.17.0/lib/ruby-prof/rack.rb&line=26"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/ruby-prof-0.17.0/lib/ruby-prof/rack.rb:26">26</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.01</td>
+                   <td>0.01</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name">Rack::RubyProf::RackProfiler#pause</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/ruby-prof-0.17.0/lib/ruby-prof/rack.rb&line=30"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/ruby-prof-0.17.0/lib/ruby-prof/rack.rb:30">30</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31596/31596</td>
+                   <td class="method_name">Class#new</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/ruby-prof-0.17.0/lib/ruby-prof/rack.rb&line=23"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/ruby-prof-0.17.0/lib/ruby-prof/rack.rb:23">23</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>2.28</td>
+                   <td>0.06</td>
+                   <td>0.00</td>
+                   <td>2.23</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#Rack__RubyProf_call_70113887852220">Rack::RubyProf#call</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/ruby-prof-0.17.0/lib/ruby-prof/rack.rb&line=28"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/ruby-prof-0.17.0/lib/ruby-prof/rack.rb:28">28</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>56.58%</td>
+                 <td>1.41%</td>
+                 <td>2.28</td>
+                 <td>0.06</td>
+                 <td>0.00</td>
+                 <td>2.23</td>
+                 <td>31597</td>
+                 <td class="method_name">
+                   <a name="Rails__Application_call_70113887852220">
+                      Rails::Application#call
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb&line=163"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb:163">163</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>2.07</td>
+                   <td>0.02</td>
+                   <td>0.00</td>
+                   <td>2.05</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#Rails__Engine_call_70113887852220">Rails::Engine#call</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb&line=165"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb:165">165</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.16</td>
+                   <td>0.06</td>
+                   <td>0.00</td>
+                   <td>0.10</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#Rails__Application_build_original_fullpath_70113887852220">Rails::Application#build_original_fullpath</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb&line=163"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb:163">163</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>2.07</td>
+                   <td>0.02</td>
+                   <td>0.00</td>
+                   <td>2.05</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#Rails__Application_call_70113887852220">Rails::Application#call</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb&line=165"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb:165">165</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>51.32%</td>
+                 <td>0.45%</td>
+                 <td>2.07</td>
+                 <td>0.02</td>
+                 <td>0.00</td>
+                 <td>2.05</td>
+                 <td>31597</td>
+                 <td class="method_name">
+                   <a name="Rails__Engine_call_70113887852220">
+                      Rails::Engine#call
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/engine.rb&line=514"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/engine.rb:514">514</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>2.05</td>
+                   <td>0.03</td>
+                   <td>0.00</td>
+                   <td>2.02</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#Rails__Application_env_config_70113887852220">Rails::Application#env_config</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/engine.rb&line=514"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/engine.rb:514">514</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>2.05</td>
+                   <td>0.03</td>
+                   <td>0.00</td>
+                   <td>2.02</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#Rails__Engine_call_70113887852220">Rails::Engine#call</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/engine.rb&line=514"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/engine.rb:514">514</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>50.86%</td>
+                 <td>0.66%</td>
+                 <td>2.05</td>
+                 <td>0.03</td>
+                 <td>0.00</td>
+                 <td>2.02</td>
+                 <td>31597</td>
+                 <td class="method_name">
+                   <a name="Rails__Application_env_config_70113887852220">
+                      Rails::Application#env_config
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb&line=245"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb:245">245</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>2.02</td>
+                   <td>0.19</td>
+                   <td>0.00</td>
+                   <td>1.83</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#Rails__Application_validate_secret_key_config!_70113887852220">Rails::Application#validate_secret_key_config!</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb&line=246"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb:246">246</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>2.02</td>
+                   <td>0.19</td>
+                   <td>0.00</td>
+                   <td>1.83</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#Rails__Application_env_config_70113887852220">Rails::Application#env_config</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb&line=246"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb:246">246</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>50.21%</td>
+                 <td>4.83%</td>
+                 <td>2.02</td>
+                 <td>0.19</td>
+                 <td>0.00</td>
+                 <td>1.83</td>
+                 <td>31597</td>
+                 <td class="method_name">
+                   <a name="Rails__Application_validate_secret_key_config!_70113887852220">
+                      Rails::Application#validate_secret_key_config!
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb&line=529"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb:529">529</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>1.51</td>
+                   <td>0.04</td>
+                   <td>0.00</td>
+                   <td>1.47</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#_Class__ActiveSupport__Deprecation__warn_70113887852220">&lt;Class::ActiveSupport::Deprecation&gt;#warn</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb&line=530"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb:530">530</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.21</td>
+                   <td>0.10</td>
+                   <td>0.00</td>
+                   <td>0.11</td>
+                   <td>63194/63194</td>
+                   <td class="method_name"><a href="#ActiveSupport__OrderedOptions_method_missing_70113887852220">ActiveSupport::OrderedOptions#method_missing</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb&line=533"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb:533">533</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.05</td>
+                   <td>0.03</td>
+                   <td>0.00</td>
+                   <td>0.01</td>
+                   <td>31597/31601</td>
+                   <td class="method_name"><a href="#Kernel_raise_70113887852220">Kernel#raise</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb&line=534"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb:534">534</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.02</td>
+                   <td>0.02</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>63194/63194</td>
+                   <td class="method_name">Rails::Application#secrets</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb&line=533"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb:533">533</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.02</td>
+                   <td>0.02</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>63194/63194</td>
+                   <td class="method_name">NilClass#blank?</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb&line=533"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb:533">533</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.02</td>
+                   <td>0.02</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name">&lt;Module::Rails&gt;#env</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb&line=534"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb:534">534</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.01</td>
+                   <td>0.01</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/63202</td>
+                   <td class="method_name">Exception#backtrace</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb&line=534"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb:534">534</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>1.51</td>
+                   <td>0.04</td>
+                   <td>0.00</td>
+                   <td>1.47</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#Rails__Application_validate_secret_key_config!_70113887852220">Rails::Application#validate_secret_key_config!</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb&line=530"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb:530">530</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>37.35%</td>
+                 <td>0.95%</td>
+                 <td>1.51</td>
+                 <td>0.04</td>
+                 <td>0.00</td>
+                 <td>1.47</td>
+                 <td>31597</td>
+                 <td class="method_name">
+                   <a name="_Class__ActiveSupport__Deprecation__warn_70113887852220">
+                      &lt;Class::ActiveSupport::Deprecation&gt;#warn
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/instance_delegator.rb&line=19"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/instance_delegator.rb:19">19</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>1.45</td>
+                   <td>0.04</td>
+                   <td>0.00</td>
+                   <td>1.41</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#ActiveSupport__Deprecation__Reporting_warn_70113887852220">ActiveSupport::Deprecation::Reporting#warn</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/instance_delegator.rb&line=19"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/instance_delegator.rb:19">19</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.02</td>
+                   <td>0.02</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name">&lt;Class::ActiveSupport::Deprecation&gt;#instance</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/instance_delegator.rb&line=19"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/instance_delegator.rb:19">19</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>1.45</td>
+                   <td>0.04</td>
+                   <td>0.00</td>
+                   <td>1.41</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#_Class__ActiveSupport__Deprecation__warn_70113887852220">&lt;Class::ActiveSupport::Deprecation&gt;#warn</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/instance_delegator.rb&line=19"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/instance_delegator.rb:19">19</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>36.01%</td>
+                 <td>1.09%</td>
+                 <td>1.45</td>
+                 <td>0.04</td>
+                 <td>0.00</td>
+                 <td>1.41</td>
+                 <td>31597</td>
+                 <td class="method_name">
+                   <a name="ActiveSupport__Deprecation__Reporting_warn_70113887852220">
+                      ActiveSupport::Deprecation::Reporting#warn
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb&line=15"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb:15">15</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.89</td>
+                   <td>0.13</td>
+                   <td>0.00</td>
+                   <td>0.76</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#ActiveSupport__Deprecation__Reporting_deprecation_message_70113887852220">ActiveSupport::Deprecation::Reporting#deprecation_message</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb&line=18"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb:18">18</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.30</td>
+                   <td>0.30</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#Kernel_caller_70113887852220">Kernel#caller</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb&line=17"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb:17">17</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.22</td>
+                   <td>0.03</td>
+                   <td>0.00</td>
+                   <td>0.19</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#Kernel_tap_70113887852220">Kernel#tap</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb&line=18"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb:18">18</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.89</td>
+                   <td>0.13</td>
+                   <td>0.00</td>
+                   <td>0.76</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#ActiveSupport__Deprecation__Reporting_warn_70113887852220">ActiveSupport::Deprecation::Reporting#warn</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb&line=18"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb:18">18</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>22.09%</td>
+                 <td>3.29%</td>
+                 <td>0.89</td>
+                 <td>0.13</td>
+                 <td>0.00</td>
+                 <td>0.76</td>
+                 <td>31597</td>
+                 <td class="method_name">
+                   <a name="ActiveSupport__Deprecation__Reporting_deprecation_message_70113887852220">
+                      ActiveSupport::Deprecation::Reporting#deprecation_message
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb&line=65"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb:65">65</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.76</td>
+                   <td>0.08</td>
+                   <td>0.00</td>
+                   <td>0.67</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#ActiveSupport__Deprecation__Reporting_deprecation_caller_message_70113887852220">ActiveSupport::Deprecation::Reporting#deprecation_caller_message</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb&line=67"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb:67">67</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.76</td>
+                   <td>0.08</td>
+                   <td>0.00</td>
+                   <td>0.67</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#ActiveSupport__Deprecation__Reporting_deprecation_message_70113887852220">ActiveSupport::Deprecation::Reporting#deprecation_message</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb&line=67"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb:67">67</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>18.80%</td>
+                 <td>2.11%</td>
+                 <td>0.76</td>
+                 <td>0.08</td>
+                 <td>0.00</td>
+                 <td>0.67</td>
+                 <td>31597</td>
+                 <td class="method_name">
+                   <a name="ActiveSupport__Deprecation__Reporting_deprecation_caller_message_70113887852220">
+                      ActiveSupport::Deprecation::Reporting#deprecation_caller_message
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb&line=71"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb:71">71</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.67</td>
+                   <td>0.07</td>
+                   <td>0.00</td>
+                   <td>0.60</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#ActiveSupport__Deprecation__Reporting_extract_callstack_70113887852220">ActiveSupport::Deprecation::Reporting#extract_callstack</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb&line=71"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb:71">71</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.67</td>
+                   <td>0.07</td>
+                   <td>0.00</td>
+                   <td>0.60</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#ActiveSupport__Deprecation__Reporting_deprecation_caller_message_70113887852220">ActiveSupport::Deprecation::Reporting#deprecation_caller_message</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb&line=71"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb:71">71</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>16.70%</td>
+                 <td>1.84%</td>
+                 <td>0.67</td>
+                 <td>0.07</td>
+                 <td>0.00</td>
+                 <td>0.60</td>
+                 <td>31597</td>
+                 <td class="method_name">
+                   <a name="ActiveSupport__Deprecation__Reporting_extract_callstack_70113887852220">
+                      ActiveSupport::Deprecation::Reporting#extract_callstack
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb&line=82"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb:82">82</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.23</td>
+                   <td>0.23</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#_Class__File__expand_path_70113887852220">&lt;Class::File&gt;#expand_path</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb&line=82"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb:82">82</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.18</td>
+                   <td>0.03</td>
+                   <td>0.00</td>
+                   <td>0.16</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#Enumerable_find_70113887852220">Enumerable#find</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb&line=83"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb:83">83</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.13</td>
+                   <td>0.03</td>
+                   <td>0.00</td>
+                   <td>0.10</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#String_match_70113887852220">String#match</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb&line=85"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb:85">85</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.05</td>
+                   <td>0.05</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#MatchData_captures_70113887852220">MatchData#captures</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb&line=86"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb:86">86</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.01</td>
+                   <td>0.01</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31598</td>
+                   <td class="method_name">Array#first</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb&line=83"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb:83">83</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.08</td>
+                   <td>0.05</td>
+                   <td>0.00</td>
+                   <td>0.03</td>
+                   <td>63194/126388</td>
+                   <td class="method_name"><a href="#Puma__Server_handle_request_70113887852220">Puma::Server#handle_request</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=794"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:794">794</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.16</td>
+                   <td>0.10</td>
+                   <td>0.00</td>
+                   <td>0.05</td>
+                   <td>31597/126388</td>
+                   <td class="method_name"><a href="#Enumerable_find_70113887852220">Enumerable#find</a></td>
+                   <td></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.18</td>
+                   <td>0.05</td>
+                   <td>0.00</td>
+                   <td>0.13</td>
+                   <td>31597/126388</td>
+                   <td class="method_name"><a href="#Kernel_tap_70113887852220">Kernel#tap</a></td>
+                   <td></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>10.39%</td>
+                 <td>5.15%</td>
+                 <td>0.42</td>
+                 <td>0.21</td>
+                 <td>0.00</td>
+                 <td>0.21</td>
+                 <td>126388</td>
+                 <td class="method_name">
+                   <a name="Array_each_70113887852220">
+                      Array#each
+                   </a>
+                 </td>
+                 <td></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.13</td>
+                   <td>0.03</td>
+                   <td>0.00</td>
+                   <td>0.09</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#_Module__ActiveSupport__Notifications__instrument_70113887852220">&lt;Module::ActiveSupport::Notifications&gt;#instrument</a></td>
+                   <td></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.05</td>
+                   <td>0.05</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>315970/315970</td>
+                   <td class="method_name"><a href="#String_start_with__70113887852220">String#start_with?</a></td>
+                   <td></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.03</td>
+                   <td>0.03</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/63194</td>
+                   <td class="method_name"><a href="#Puma__Server_fast_write_70113887852220">Puma::Server#fast_write</a></td>
+                   <td></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31596/31596</td>
+                   <td class="method_name">IO#flush</td>
+                   <td></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name">Numeric#zero?</td>
+                   <td></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/157983</td>
+                   <td class="method_name">String#bytesize</td>
+                   <td></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.30</td>
+                   <td>0.30</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#ActiveSupport__Deprecation__Reporting_warn_70113887852220">ActiveSupport::Deprecation::Reporting#warn</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb&line=17"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb:17">17</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>7.32%</td>
+                 <td>7.32%</td>
+                 <td>0.30</td>
+                 <td>0.30</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>31597</td>
+                 <td class="method_name">
+                   <a name="Kernel_caller_70113887852220">
+                      Kernel#caller
+                   </a>
+                 </td>
+                 <td></td>
+               </tr>
+               <!-- Children -->
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.24</td>
+                   <td>0.10</td>
+                   <td>0.00</td>
+                   <td>0.14</td>
+                   <td>31596/31596</td>
+                   <td class="method_name"><a href="#Puma__Server_process_client_70113887852220">Puma::Server#process_client</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=458"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:458">458</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>6.06%</td>
+                 <td>2.54%</td>
+                 <td>0.24</td>
+                 <td>0.10</td>
+                 <td>0.00</td>
+                 <td>0.14</td>
+                 <td>31596</td>
+                 <td class="method_name">
+                   <a name="Puma__Client_reset_70113887852220">
+                      Puma::Client#reset
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb&line=85"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb:85">85</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.13</td>
+                   <td>0.06</td>
+                   <td>0.00</td>
+                   <td>0.07</td>
+                   <td>31596/31598</td>
+                   <td class="method_name"><a href="#Puma__Client_try_to_finish_70113887852220">Puma::Client#try_to_finish</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb&line=106"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb:106">106</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.01</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.01</td>
+                   <td>31596/31596</td>
+                   <td class="method_name">Kernel#dup</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb&line=87"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb:87">87</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>-0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31596/31599</td>
+                   <td class="method_name">&lt;Class::IO&gt;#select</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb&line=104"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb:104">104</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31596/31596</td>
+                   <td class="method_name">Puma::HttpParser#reset</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb&line=85"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb:85">85</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.23</td>
+                   <td>0.14</td>
+                   <td>0.00</td>
+                   <td>0.10</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#Puma__Server_handle_request_70113887852220">Puma::Server#handle_request</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=654"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:654">654</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>5.81%</td>
+                 <td>3.36%</td>
+                 <td>0.23</td>
+                 <td>0.14</td>
+                 <td>0.00</td>
+                 <td>0.10</td>
+                 <td>31597</td>
+                 <td class="method_name">
+                   <a name="Puma__Events_unknown_error_70113887852220">
+                      Puma::Events#unknown_error
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/events.rb&line=111"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/events.rb:111">111</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.05</td>
+                   <td>0.05</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#Exception_inspect_70113887852220">Exception#inspect</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/events.rb&line=116"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/events.rb:116">116</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.03</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.03</td>
+                   <td>31597/31597</td>
+                   <td class="method_name">Time#to_formatted_s</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/events.rb&line=115"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/events.rb:115">115</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.02</td>
+                   <td>0.02</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name">IO#puts</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/events.rb&line=121"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/events.rb:121">121</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31599</td>
+                   <td class="method_name">&lt;Class::Time&gt;#now</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/events.rb&line=115"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/events.rb:115">115</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name">Array#join</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/events.rb&line=121"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/events.rb:121">121</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/63202</td>
+                   <td class="method_name">Exception#backtrace</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/events.rb&line=120"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/events.rb:120">120</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name">Exception#respond_to?</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/events.rb&line=111"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/events.rb:111">111</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.23</td>
+                   <td>0.23</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#ActiveSupport__Deprecation__Reporting_extract_callstack_70113887852220">ActiveSupport::Deprecation::Reporting#extract_callstack</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb&line=82"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb:82">82</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>5.78%</td>
+                 <td>5.78%</td>
+                 <td>0.23</td>
+                 <td>0.23</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>31597</td>
+                 <td class="method_name">
+                   <a name="_Class__File__expand_path_70113887852220">
+                      &lt;Class::File&gt;#expand_path
+                   </a>
+                 </td>
+                 <td></td>
+               </tr>
+               <!-- Children -->
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.22</td>
+                   <td>0.03</td>
+                   <td>0.00</td>
+                   <td>0.19</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#ActiveSupport__Deprecation__Reporting_warn_70113887852220">ActiveSupport::Deprecation::Reporting#warn</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb&line=18"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb:18">18</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>5.51%</td>
+                 <td>0.69%</td>
+                 <td>0.22</td>
+                 <td>0.03</td>
+                 <td>0.00</td>
+                 <td>0.19</td>
+                 <td>31597</td>
+                 <td class="method_name">
+                   <a name="Kernel_tap_70113887852220">
+                      Kernel#tap
+                   </a>
+                 </td>
+                 <td></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.18</td>
+                   <td>0.05</td>
+                   <td>0.00</td>
+                   <td>0.13</td>
+                   <td>31597/126388</td>
+                   <td class="method_name"><a href="#Array_each_70113887852220">Array#each</a></td>
+                   <td></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.01</td>
+                   <td>0.01</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name">ActiveSupport::Deprecation::Behavior#behavior</td>
+                   <td></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.21</td>
+                   <td>0.10</td>
+                   <td>0.00</td>
+                   <td>0.11</td>
+                   <td>63194/63194</td>
+                   <td class="method_name"><a href="#Rails__Application_validate_secret_key_config!_70113887852220">Rails::Application#validate_secret_key_config!</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb&line=533"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb:533">533</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>5.28%</td>
+                 <td>2.48%</td>
+                 <td>0.21</td>
+                 <td>0.10</td>
+                 <td>0.00</td>
+                 <td>0.11</td>
+                 <td>63194</td>
+                 <td class="method_name">
+                   <a name="ActiveSupport__OrderedOptions_method_missing_70113887852220">
+                      ActiveSupport::OrderedOptions#method_missing
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/ordered_options.rb&line=30"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/ordered_options.rb:30">30</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.06</td>
+                   <td>0.04</td>
+                   <td>0.00</td>
+                   <td>0.02</td>
+                   <td>63194/63194</td>
+                   <td class="method_name"><a href="#ActiveSupport__OrderedOptions_[]_70113887852220">ActiveSupport::OrderedOptions#[]</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/ordered_options.rb&line=34"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/ordered_options.rb:34">34</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.03</td>
+                   <td>0.03</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>63194/63194</td>
+                   <td class="method_name">Symbol#to_s</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/ordered_options.rb&line=30"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/ordered_options.rb:30">30</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.02</td>
+                   <td>0.02</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>63194/63194</td>
+                   <td class="method_name">String#chomp!</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/ordered_options.rb&line=31"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/ordered_options.rb:31">31</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.18</td>
+                   <td>0.03</td>
+                   <td>0.00</td>
+                   <td>0.16</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#ActiveSupport__Deprecation__Reporting_extract_callstack_70113887852220">ActiveSupport::Deprecation::Reporting#extract_callstack</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb&line=83"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb:83">83</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>4.56%</td>
+                 <td>0.65%</td>
+                 <td>0.18</td>
+                 <td>0.03</td>
+                 <td>0.00</td>
+                 <td>0.16</td>
+                 <td>31597</td>
+                 <td class="method_name">
+                   <a name="Enumerable_find_70113887852220">
+                      Enumerable#find
+                   </a>
+                 </td>
+                 <td></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.16</td>
+                   <td>0.10</td>
+                   <td>0.00</td>
+                   <td>0.05</td>
+                   <td>31597/126388</td>
+                   <td class="method_name"><a href="#Array_each_70113887852220">Array#each</a></td>
+                   <td></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.16</td>
+                   <td>0.06</td>
+                   <td>0.00</td>
+                   <td>0.10</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#Rails__Application_call_70113887852220">Rails::Application#call</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb&line=163"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb:163">163</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>3.86%</td>
+                 <td>1.47%</td>
+                 <td>0.16</td>
+                 <td>0.06</td>
+                 <td>0.00</td>
+                 <td>0.10</td>
+                 <td>31597</td>
+                 <td class="method_name">
+                   <a name="Rails__Application_build_original_fullpath_70113887852220">
+                      Rails::Application#build_original_fullpath
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb&line=517"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb:517">517</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.10</td>
+                   <td>0.02</td>
+                   <td>0.00</td>
+                   <td>0.08</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#Object_present__70113887852220">Object#present?</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb&line=521"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb:521">521</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.14</td>
+                   <td>0.14</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31596/31596</td>
+                   <td class="method_name"><a href="#Puma__Server_handle_request_70113887852220">Puma::Server#handle_request</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=589"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:589">589</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>3.38%</td>
+                 <td>3.38%</td>
+                 <td>0.14</td>
+                 <td>0.14</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>31596</td>
+                 <td class="method_name">
+                   <a name="Puma__Server_normalize_env_70113887852220">
+                      Puma::Server#normalize_env
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=517"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:517">517</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31596/31596</td>
+                   <td class="method_name">Puma::Client#peerip</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=555"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:555">555</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31596/126393</td>
+                   <td class="method_name">Hash#key?</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=553"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:553">553</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31596/157983</td>
+                   <td class="method_name">String#bytesize</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=520"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:520">520</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>63192/63192</td>
+                   <td class="method_name">String#[]</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=520"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:520">520</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31596/31596</td>
+                   <td class="method_name">String#index</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=518"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:518">518</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>2/31598</td>
+                   <td class="method_name">Puma::Client#eagerly_finish</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb&line=366"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb:366">366</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.13</td>
+                   <td>0.06</td>
+                   <td>0.00</td>
+                   <td>0.07</td>
+                   <td>31596/31598</td>
+                   <td class="method_name"><a href="#Puma__Client_reset_70113887852220">Puma::Client#reset</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb&line=106"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb:106">106</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>3.28%</td>
+                 <td>1.54%</td>
+                 <td>0.13</td>
+                 <td>0.06</td>
+                 <td>0.00</td>
+                 <td>0.07</td>
+                 <td>31598</td>
+                 <td class="method_name">
+                   <a name="Puma__Client_try_to_finish_70113887852220">
+                      Puma::Client#try_to_finish
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb&line=277"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb:277">277</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.06</td>
+                   <td>0.06</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31595/31595</td>
+                   <td class="method_name"><a href="#Puma__Client_setup_body_70113887852220">Puma::Client#setup_body</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb&line=304"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb:304">304</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.01</td>
+                   <td>0.01</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31598/31598</td>
+                   <td class="method_name">IO#read_nonblock</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb&line=280"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb:280">280</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31595/31595</td>
+                   <td class="method_name">Puma::HttpParser#execute</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb&line=301"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb:301">301</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>3/63202</td>
+                   <td class="method_name">Exception#backtrace</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb&line=284"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb:284">284</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>3/31601</td>
+                   <td class="method_name"><a href="#Kernel_raise_70113887852220">Kernel#raise</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb&line=284"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb:284">284</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>3/63204</td>
+                   <td class="method_name">Module#===</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb&line=280"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb:280">280</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>6/10</td>
+                   <td class="method_name">&lt;Class::SystemCallError&gt;#===</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb&line=280"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb:280">280</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31595/31595</td>
+                   <td class="method_name">Puma::HttpParser#finished?</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb&line=303"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb:303">303</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.13</td>
+                   <td>0.03</td>
+                   <td>0.00</td>
+                   <td>0.10</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#ActiveSupport__Deprecation__Reporting_extract_callstack_70113887852220">ActiveSupport::Deprecation::Reporting#extract_callstack</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb&line=85"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb:85">85</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>3.23%</td>
+                 <td>0.64%</td>
+                 <td>0.13</td>
+                 <td>0.03</td>
+                 <td>0.00</td>
+                 <td>0.10</td>
+                 <td>31597</td>
+                 <td class="method_name">
+                   <a name="String_match_70113887852220">
+                      String#match
+                   </a>
+                 </td>
+                 <td></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.10</td>
+                   <td>0.10</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#Regexp_match_70113887852220">Regexp#match</a></td>
+                   <td></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.13</td>
+                   <td>0.03</td>
+                   <td>0.00</td>
+                   <td>0.09</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#Array_each_70113887852220">Array#each</a></td>
+                   <td></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>3.12%</td>
+                 <td>0.83%</td>
+                 <td>0.13</td>
+                 <td>0.03</td>
+                 <td>0.00</td>
+                 <td>0.09</td>
+                 <td>31597</td>
+                 <td class="method_name">
+                   <a name="_Module__ActiveSupport__Notifications__instrument_70113887852220">
+                      &lt;Module::ActiveSupport::Notifications&gt;#instrument
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/notifications.rb&line=163"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/notifications.rb:163">163</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.09</td>
+                   <td>0.02</td>
+                   <td>0.00</td>
+                   <td>0.07</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#ActiveSupport__Notifications__Fanout_listening__70113887852220">ActiveSupport::Notifications::Fanout#listening?</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/notifications.rb&line=163"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/notifications.rb:163">163</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.01</td>
+                   <td>0.01</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name">Kernel#block_given?</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/notifications.rb&line=166"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/notifications.rb:166">166</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.10</td>
+                   <td>0.10</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#String_match_70113887852220">String#match</a></td>
+                   <td></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>2.59%</td>
+                 <td>2.59%</td>
+                 <td>0.10</td>
+                 <td>0.10</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>31597</td>
+                 <td class="method_name">
+                   <a name="Regexp_match_70113887852220">
+                      Regexp#match
+                   </a>
+                 </td>
+                 <td></td>
+               </tr>
+               <!-- Children -->
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.10</td>
+                   <td>0.02</td>
+                   <td>0.00</td>
+                   <td>0.08</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#Rails__Application_build_original_fullpath_70113887852220">Rails::Application#build_original_fullpath</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb&line=521"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb:521">521</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>2.39%</td>
+                 <td>0.48%</td>
+                 <td>0.10</td>
+                 <td>0.02</td>
+                 <td>0.00</td>
+                 <td>0.08</td>
+                 <td>31597</td>
+                 <td class="method_name">
+                   <a name="Object_present__70113887852220">
+                      Object#present?
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/core_ext/object/blank.rb&line=24"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/core_ext/object/blank.rb:24">24</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.08</td>
+                   <td>0.01</td>
+                   <td>0.00</td>
+                   <td>0.06</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#String_blank__70113887852220">String#blank?</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/core_ext/object/blank.rb&line=24"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/core_ext/object/blank.rb:24">24</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.09</td>
+                   <td>0.02</td>
+                   <td>0.00</td>
+                   <td>0.07</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#_Module__ActiveSupport__Notifications__instrument_70113887852220">&lt;Module::ActiveSupport::Notifications&gt;#instrument</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/notifications.rb&line=163"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/notifications.rb:163">163</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>2.14%</td>
+                 <td>0.48%</td>
+                 <td>0.09</td>
+                 <td>0.02</td>
+                 <td>0.00</td>
+                 <td>0.07</td>
+                 <td>31597</td>
+                 <td class="method_name">
+                   <a name="ActiveSupport__Notifications__Fanout_listening__70113887852220">
+                      ActiveSupport::Notifications::Fanout#listening?
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/notifications/fanout.rb&line=62"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/notifications/fanout.rb:62">62</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.06</td>
+                   <td>0.02</td>
+                   <td>0.00</td>
+                   <td>0.04</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#ActiveSupport__Notifications__Fanout_listeners_for_70113887852220">ActiveSupport::Notifications::Fanout#listeners_for</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/notifications/fanout.rb&line=62"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/notifications/fanout.rb:62">62</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.01</td>
+                   <td>0.01</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/63193</td>
+                   <td class="method_name">Array#any?</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/notifications/fanout.rb&line=62"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/notifications/fanout.rb:62">62</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.08</td>
+                   <td>0.05</td>
+                   <td>0.00</td>
+                   <td>0.03</td>
+                   <td>63193/63193</td>
+                   <td class="method_name"><a href="#Rack__RubyProf_call_70113887852220">Rack::RubyProf#call</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/ruby-prof-0.17.0/lib/ruby-prof/rack.rb&line=30"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/ruby-prof-0.17.0/lib/ruby-prof/rack.rb:30">30</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>1.91%</td>
+                 <td>1.27%</td>
+                 <td>0.08</td>
+                 <td>0.05</td>
+                 <td>0.00</td>
+                 <td>0.03</td>
+                 <td>63193</td>
+                 <td class="method_name">
+                   <a name="Rack__RubyProf_profiler_70113887852220">
+                      Rack::RubyProf#profiler
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/ruby-prof-0.17.0/lib/ruby-prof/rack.rb&line=144"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/ruby-prof-0.17.0/lib/ruby-prof/rack.rb:144">144</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.03</td>
+                   <td>0.02</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>63193/63193</td>
+                   <td class="method_name">Rack::RubyProf#aggregate_requests?</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/ruby-prof-0.17.0/lib/ruby-prof/rack.rb&line=144"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/ruby-prof-0.17.0/lib/ruby-prof/rack.rb:144">144</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.08</td>
+                   <td>0.01</td>
+                   <td>0.00</td>
+                   <td>0.06</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#Object_present__70113887852220">Object#present?</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/core_ext/object/blank.rb&line=24"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/core_ext/object/blank.rb:24">24</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>1.90%</td>
+                 <td>0.35%</td>
+                 <td>0.08</td>
+                 <td>0.01</td>
+                 <td>0.00</td>
+                 <td>0.06</td>
+                 <td>31597</td>
+                 <td class="method_name">
+                   <a name="String_blank__70113887852220">
+                      String#blank?
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/core_ext/object/blank.rb&line=117"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/core_ext/object/blank.rb:117">117</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.06</td>
+                   <td>0.06</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#Regexp_____70113887852220">Regexp#===</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/core_ext/object/blank.rb&line=117"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/core_ext/object/blank.rb:117">117</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.03</td>
+                   <td>0.03</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/63194</td>
+                   <td class="method_name"><a href="#Puma__Server_handle_request_70113887852220">Puma::Server#handle_request</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=757"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:757">757</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.03</td>
+                   <td>0.03</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/63194</td>
+                   <td class="method_name"><a href="#Array_each_70113887852220">Array#each</a></td>
+                   <td></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>1.58%</td>
+                 <td>1.58%</td>
+                 <td>0.06</td>
+                 <td>0.06</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>63194</td>
+                 <td class="method_name">
+                   <a name="Puma__Server_fast_write_70113887852220">
+                      Puma::Server#fast_write
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=961"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:961">961</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>63194/63194</td>
+                   <td class="method_name">IO#syswrite</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=964"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:964">964</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>1/63202</td>
+                   <td class="method_name">Exception#backtrace</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=972"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:972">972</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>1/31601</td>
+                   <td class="method_name"><a href="#Kernel_raise_70113887852220">Kernel#raise</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=972"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:972">972</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>3/10</td>
+                   <td class="method_name">&lt;Class::SystemCallError&gt;#===</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=964"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:964">964</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>63193/157983</td>
+                   <td class="method_name">String#bytesize</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=975"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:975">975</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.06</td>
+                   <td>0.06</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#String_blank__70113887852220">String#blank?</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/core_ext/object/blank.rb&line=117"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/core_ext/object/blank.rb:117">117</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>1.55%</td>
+                 <td>1.55%</td>
+                 <td>0.06</td>
+                 <td>0.06</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>31597</td>
+                 <td class="method_name">
+                   <a name="Regexp_____70113887852220">
+                      Regexp#===
+                   </a>
+                 </td>
+                 <td></td>
+               </tr>
+               <!-- Children -->
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.06</td>
+                   <td>0.04</td>
+                   <td>0.00</td>
+                   <td>0.02</td>
+                   <td>63194/63194</td>
+                   <td class="method_name"><a href="#ActiveSupport__OrderedOptions_method_missing_70113887852220">ActiveSupport::OrderedOptions#method_missing</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/ordered_options.rb&line=34"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/ordered_options.rb:34">34</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>1.54%</td>
+                 <td>0.94%</td>
+                 <td>0.06</td>
+                 <td>0.04</td>
+                 <td>0.00</td>
+                 <td>0.02</td>
+                 <td>63194</td>
+                 <td class="method_name">
+                   <a name="ActiveSupport__OrderedOptions_[]_70113887852220">
+                      ActiveSupport::OrderedOptions#[]
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/ordered_options.rb&line=26"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/ordered_options.rb:26">26</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.01</td>
+                   <td>0.01</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>63194/63194</td>
+                   <td class="method_name">Hash#[]</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/ordered_options.rb&line=26"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/ordered_options.rb:26">26</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.01</td>
+                   <td>0.01</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>63194/63194</td>
+                   <td class="method_name">Symbol#to_sym</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/ordered_options.rb&line=26"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/ordered_options.rb:26">26</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.06</td>
+                   <td>0.02</td>
+                   <td>0.00</td>
+                   <td>0.04</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#ActiveSupport__Notifications__Fanout_listening__70113887852220">ActiveSupport::Notifications::Fanout#listening?</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/notifications/fanout.rb&line=62"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/notifications/fanout.rb:62">62</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>1.49%</td>
+                 <td>0.50%</td>
+                 <td>0.06</td>
+                 <td>0.02</td>
+                 <td>0.00</td>
+                 <td>0.04</td>
+                 <td>31597</td>
+                 <td class="method_name">
+                   <a name="ActiveSupport__Notifications__Fanout_listeners_for_70113887852220">
+                      ActiveSupport::Notifications::Fanout#listeners_for
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/notifications/fanout.rb&line=55"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/notifications/fanout.rb:55">55</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.04</td>
+                   <td>0.02</td>
+                   <td>0.00</td>
+                   <td>0.02</td>
+                   <td>31597/31598</td>
+                   <td class="method_name">ThreadSafe::Cache#[]</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/notifications/fanout.rb&line=55"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/notifications/fanout.rb:55">55</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>1/1</td>
+                   <td class="method_name">Mutex_m#mu_synchronize</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/notifications/fanout.rb&line=55"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/notifications/fanout.rb:55">55</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.06</td>
+                   <td>0.04</td>
+                   <td>0.00</td>
+                   <td>0.02</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#Puma__Server_handle_request_70113887852220">Puma::Server#handle_request</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=656"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:656">656</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>1.48%</td>
+                 <td>0.95%</td>
+                 <td>0.06</td>
+                 <td>0.04</td>
+                 <td>0.00</td>
+                 <td>0.02</td>
+                 <td>31597</td>
+                 <td class="method_name">
+                   <a name="Puma__Server_lowlevel_error_70113887852220">
+                      Puma::Server#lowlevel_error
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=862"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:862">862</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.02</td>
+                   <td>0.02</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31599</td>
+                   <td class="method_name">Puma::UserFileDefaultOptions#[]</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=862"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:862">862</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.06</td>
+                   <td>0.06</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31595/31595</td>
+                   <td class="method_name"><a href="#Puma__Client_try_to_finish_70113887852220">Puma::Client#try_to_finish</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb&line=304"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb:304">304</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>1.48%</td>
+                 <td>1.48%</td>
+                 <td>0.06</td>
+                 <td>0.06</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>31595</td>
+                 <td class="method_name">
+                   <a name="Puma__Client_setup_body_70113887852220">
+                      Puma::Client#setup_body
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb&line=220"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb:220">220</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31595/31595</td>
+                   <td class="method_name">Puma::HttpParser#body</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb&line=229"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb:229">229</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.05</td>
+                   <td>0.05</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>315970/315970</td>
+                   <td class="method_name"><a href="#Array_each_70113887852220">Array#each</a></td>
+                   <td></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>1.33%</td>
+                 <td>1.33%</td>
+                 <td>0.05</td>
+                 <td>0.05</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>315970</td>
+                 <td class="method_name">
+                   <a name="String_start_with__70113887852220">
+                      String#start_with?
+                   </a>
+                 </td>
+                 <td></td>
+               </tr>
+               <!-- Children -->
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.05</td>
+                   <td>0.05</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#Puma__Events_unknown_error_70113887852220">Puma::Events#unknown_error</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/events.rb&line=116"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/events.rb:116">116</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>1.12%</td>
+                 <td>1.12%</td>
+                 <td>0.05</td>
+                 <td>0.05</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>31597</td>
+                 <td class="method_name">
+                   <a name="Exception_inspect_70113887852220">
+                      Exception#inspect
+                   </a>
+                 </td>
+                 <td></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name">Exception#to_s</td>
+                   <td></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>3/31601</td>
+                   <td class="method_name"><a href="#Puma__Client_try_to_finish_70113887852220">Puma::Client#try_to_finish</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb&line=284"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/client.rb:284">284</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>1/31601</td>
+                   <td class="method_name"><a href="#Puma__Server_fast_write_70113887852220">Puma::Server#fast_write</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=972"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:972">972</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.05</td>
+                   <td>0.03</td>
+                   <td>0.00</td>
+                   <td>0.01</td>
+                   <td>31597/31601</td>
+                   <td class="method_name"><a href="#Rails__Application_validate_secret_key_config!_70113887852220">Rails::Application#validate_secret_key_config!</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb&line=534"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/railties-4.2.11/lib/rails/application.rb:534">534</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>1.12%</td>
+                 <td>0.83%</td>
+                 <td>0.05</td>
+                 <td>0.03</td>
+                 <td>0.00</td>
+                 <td>0.01</td>
+                 <td>31601</td>
+                 <td class="method_name">
+                   <a name="Kernel_raise_70113887852220">
+                      Kernel#raise
+                   </a>
+                 </td>
+                 <td></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.01</td>
+                   <td>0.01</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31605</td>
+                   <td class="method_name">Exception#initialize</td>
+                   <td></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>4/4</td>
+                   <td class="method_name">&lt;Class::Exception&gt;#exception</td>
+                   <td></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.05</td>
+                   <td>0.05</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>31597/31597</td>
+                   <td class="method_name"><a href="#ActiveSupport__Deprecation__Reporting_extract_callstack_70113887852220">ActiveSupport::Deprecation::Reporting#extract_callstack</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb&line=86"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/activesupport-4.2.11/lib/active_support/deprecation/reporting.rb:86">86</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>1.12%</td>
+                 <td>1.12%</td>
+                 <td>0.05</td>
+                 <td>0.05</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>31597</td>
+                 <td class="method_name">
+                   <a name="MatchData_captures_70113887852220">
+                      MatchData#captures
+                   </a>
+                 </td>
+                 <td></td>
+               </tr>
+               <!-- Children -->
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="9">* indicates recursively called methods</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <h2><a name="70113910912540">Thread 70113887853660, Fiber: 70113910912540</a></h2>
+      <table>
+        <thead>
+          <tr>
+            <th>%Total</th>
+            <th>%Self</th>
+            <th>Total</th>
+            <th>Self</th>
+            <th>Wait</th>
+            <th>Child</th>
+            <th>Calls</th>
+            <th class="method_name">Name</th>
+            <th>Line</th>
+          </tr>
+        </thead>
+        <tbody>
+
+               <!-- Parents -->
+
+               <tr class="method">
+                 <td>100.00%</td>
+                 <td>0.00%</td>
+                 <td>2.39</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>2.39</td>
+                 <td>1</td>
+                 <td class="method_name">
+                   <a name="Puma__Server_handle_servers_70113910912540">
+                      Puma::Server#handle_servers
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=359"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:359">359</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>2.39</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>2.39</td>
+                   <td>4/7</td>
+                   <td class="method_name"><a href="#Array_each_70113910912540">Array#each</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=359"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:359">359</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>1/1</td>
+                   <td class="method_name">Puma::Server#graceful_shutdown</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=394"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:394">394</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>1/1</td>
+                   <td class="method_name">Puma::Reactor#shutdown</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=397"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:397">397</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>1/1</td>
+                   <td class="method_name">Puma::Reactor#clear!</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=396"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:396">396</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>2/2</td>
+                   <td class="method_name">IO#close</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=404"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:404">404</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>2/2</td>
+                   <td class="method_name">Puma::Events#fire</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=411"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:411">411</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>-0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>3/3</td>
+                   <td class="method_name">&lt;Class::IO&gt;#select</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=358"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:358">358</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>4/4</td>
+                   <td class="method_name">Array#first</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=359"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:359">359</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>2/7</td>
+                   <td class="method_name">Puma::Events#fire</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/events.rb&line=47"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/events.rb:47">47</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>1/7</td>
+                   <td class="method_name">Puma::ThreadPool#shutdown</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb&line=276"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb:276">276</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>2.39</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>2.39</td>
+                   <td>4/7</td>
+                   <td class="method_name"><a href="#Puma__Server_handle_servers_70113910912540">Puma::Server#handle_servers</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb&line=359"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/server.rb:359">359</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>100.00%</td>
+                 <td>0.00%</td>
+                 <td>2.39</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>2.39</td>
+                 <td>7</td>
+                 <td class="method_name">
+                   <a name="Array_each_70113910912540">
+                      Array#each
+                   </a>
+                 </td>
+                 <td></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>2.39</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>2.39</td>
+                   <td>3/3</td>
+                   <td class="method_name"><a href="#Puma__ThreadPool_wait_until_not_full_70113910912540">Puma::ThreadPool#wait_until_not_full</a></td>
+                   <td></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>3/6</td>
+                   <td class="method_name">Class#new</td>
+                   <td></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>1/1</td>
+                   <td class="method_name">Puma::Server#handle_check</td>
+                   <td></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>3/3</td>
+                   <td class="method_name">TCPServer#accept_nonblock</td>
+                   <td></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>3/3</td>
+                   <td class="method_name">Puma::ThreadPool#&lt;&lt;</td>
+                   <td></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>3/3</td>
+                   <td class="method_name">Puma::Binder#env</td>
+                   <td></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>-0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>1/2</td>
+                   <td class="method_name">Thread#join</td>
+                   <td></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>3/7</td>
+                   <td class="method_name">Puma::ThreadPool#&lt;&lt;</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb&line=141"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb:141">141</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>1/7</td>
+                   <td class="method_name">Puma::ThreadPool#shutdown</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb&line=263"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb:263">263</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>2.39</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>2.39</td>
+                   <td>3/7</td>
+                   <td class="method_name"><a href="#Puma__ThreadPool_wait_until_not_full_70113910912540">Puma::ThreadPool#wait_until_not_full</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb&line=157"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb:157">157</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>100.00%</td>
+                 <td>0.00%</td>
+                 <td>2.39</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>2.39</td>
+                 <td>7</td>
+                 <td class="method_name">
+                   <a name="Thread__Mutex_synchronize_70113910912540">
+                      Thread::Mutex#synchronize
+                   </a>
+                 </td>
+                 <td></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>2.39</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>2.39</td>
+                   <td>1/1</td>
+                   <td class="method_name"><a href="#Thread__ConditionVariable_wait_70113910912540">Thread::ConditionVariable#wait</a></td>
+                   <td></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>1/4</td>
+                   <td class="method_name">Kernel#dup</td>
+                   <td></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>1/1</td>
+                   <td class="method_name">Puma::ThreadPool::Reaper#stop</td>
+                   <td></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>1/1</td>
+                   <td class="method_name">Puma::ThreadPool::AutoTrim#stop</td>
+                   <td></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>2/2</td>
+                   <td class="method_name">Thread::ConditionVariable#broadcast</td>
+                   <td></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>3/3</td>
+                   <td class="method_name">Thread::ConditionVariable#signal</td>
+                   <td></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>2.39</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>2.39</td>
+                   <td>3/3</td>
+                   <td class="method_name"><a href="#Array_each_70113910912540">Array#each</a></td>
+                   <td></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>100.00%</td>
+                 <td>0.00%</td>
+                 <td>2.39</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>2.39</td>
+                 <td>3</td>
+                 <td class="method_name">
+                   <a name="Puma__ThreadPool_wait_until_not_full_70113910912540">
+                      Puma::ThreadPool#wait_until_not_full
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb&line=157"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb:157">157</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>2.39</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>2.39</td>
+                   <td>3/7</td>
+                   <td class="method_name"><a href="#Thread__Mutex_synchronize_70113910912540">Thread::Mutex#synchronize</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb&line=157"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb:157">157</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>2.39</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>2.39</td>
+                   <td>1/1</td>
+                   <td class="method_name"><a href="#Thread__Mutex_synchronize_70113910912540">Thread::Mutex#synchronize</a></td>
+                   <td></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>100.00%</td>
+                 <td>0.00%</td>
+                 <td>2.39</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>2.39</td>
+                 <td>1</td>
+                 <td class="method_name">
+                   <a name="Thread__ConditionVariable_wait_70113910912540">
+                      Thread::ConditionVariable#wait
+                   </a>
+                 </td>
+                 <td></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>2.39</td>
+                   <td>-8.54</td>
+                   <td>10.93</td>
+                   <td>0.00</td>
+                   <td>1/1</td>
+                   <td class="method_name"><a href="#Thread__Mutex_sleep_70113910912540">Thread::Mutex#sleep</a></td>
+                   <td></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>2.39</td>
+                   <td>-8.54</td>
+                   <td>10.93</td>
+                   <td>0.00</td>
+                   <td>1/1</td>
+                   <td class="method_name"><a href="#Thread__ConditionVariable_wait_70113910912540">Thread::ConditionVariable#wait</a></td>
+                   <td></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>100.00%</td>
+                 <td>-356.92%</td>
+                 <td>2.39</td>
+                 <td>-8.54</td>
+                 <td>10.93</td>
+                 <td>0.00</td>
+                 <td>1</td>
+                 <td class="method_name">
+                   <a name="Thread__Mutex_sleep_70113910912540">
+                      Thread::Mutex#sleep
+                   </a>
+                 </td>
+                 <td></td>
+               </tr>
+               <!-- Children -->
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="9">* indicates recursively called methods</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <h2><a name="70113910911300">Thread 70113887854160, Fiber: 70113910911300</a></h2>
+      <table>
+        <thead>
+          <tr>
+            <th>%Total</th>
+            <th>%Self</th>
+            <th>Total</th>
+            <th>Self</th>
+            <th>Wait</th>
+            <th>Child</th>
+            <th>Calls</th>
+            <th class="method_name">Name</th>
+            <th>Line</th>
+          </tr>
+        </thead>
+        <tbody>
+
+               <!-- Parents -->
+
+               <tr class="method">
+                 <td>99.99%</td>
+                 <td>0.00%</td>
+                 <td>2.39</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>2.39</td>
+                 <td>1</td>
+                 <td class="method_name">
+                   <a name="Puma__Reactor_run_internal_70113910911300">
+                      Puma::Reactor#run_internal
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/reactor.rb&line=42"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/reactor.rb:42">42</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>2.39</td>
+                   <td>-8.54</td>
+                   <td>10.93</td>
+                   <td>0.00</td>
+                   <td>3/3</td>
+                   <td class="method_name"><a href="#_Class__IO__select_70113910911300">&lt;Class::IO&gt;#select</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/reactor.rb&line=29"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/reactor.rb:29">29</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>-0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>4/4</td>
+                   <td class="method_name">Array#each</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/reactor.rb&line=43"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/reactor.rb:43">43</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>1/6</td>
+                   <td class="method_name">Thread::Mutex#synchronize</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/reactor.rb&line=124"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/reactor.rb:124">124</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>2.39</td>
+                   <td>-8.54</td>
+                   <td>10.93</td>
+                   <td>0.00</td>
+                   <td>3/3</td>
+                   <td class="method_name"><a href="#Puma__Reactor_run_internal_70113910911300">Puma::Reactor#run_internal</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/reactor.rb&line=29"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/reactor.rb:29">29</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>99.98%</td>
+                 <td>-356.86%</td>
+                 <td>2.39</td>
+                 <td>-8.54</td>
+                 <td>10.93</td>
+                 <td>0.00</td>
+                 <td>3</td>
+                 <td class="method_name">
+                   <a name="_Class__IO__select_70113910911300">
+                      &lt;Class::IO&gt;#select
+                   </a>
+                 </td>
+                 <td></td>
+               </tr>
+               <!-- Children -->
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="9">* indicates recursively called methods</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <h2><a name="70113878866760">Thread 70113887854000, Fiber: 70113878866760</a></h2>
+      <table>
+        <thead>
+          <tr>
+            <th>%Total</th>
+            <th>%Self</th>
+            <th>Total</th>
+            <th>Self</th>
+            <th>Wait</th>
+            <th>Child</th>
+            <th>Calls</th>
+            <th class="method_name">Name</th>
+            <th>Line</th>
+          </tr>
+        </thead>
+        <tbody>
+
+               <!-- Parents -->
+
+               <tr class="method">
+                 <td>100.00%</td>
+                 <td>0.00%</td>
+                 <td>2.20</td>
+                 <td>0.00</td>
+                 <td>0.00</td>
+                 <td>2.20</td>
+                 <td>1</td>
+                 <td class="method_name">
+                   <a name="Puma__ThreadPool__Reaper_start!_70113878866760">
+                      Puma::ThreadPool::Reaper#start!
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb&line=243"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb:243">243</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>2.20</td>
+                   <td>-7.85</td>
+                   <td>10.05</td>
+                   <td>0.00</td>
+                   <td>11/11</td>
+                   <td class="method_name"><a href="#Kernel_sleep_70113878866760">Kernel#sleep</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb&line=244"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb:244">244</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>11/11</td>
+                   <td class="method_name">Puma::ThreadPool#reap</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb&line=243"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb:243">243</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+               <!-- Parents -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>2.20</td>
+                   <td>-7.85</td>
+                   <td>10.05</td>
+                   <td>0.00</td>
+                   <td>11/11</td>
+                   <td class="method_name"><a href="#Puma__ThreadPool__Reaper_start!_70113878866760">Puma::ThreadPool::Reaper#start!</a></td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb&line=244"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/thread_pool.rb:244">244</a></td>
+                 </tr>
+
+               <tr class="method">
+                 <td>99.98%</td>
+                 <td>-356.91%</td>
+                 <td>2.20</td>
+                 <td>-7.85</td>
+                 <td>10.05</td>
+                 <td>0.00</td>
+                 <td>11</td>
+                 <td class="method_name">
+                   <a name="Kernel_sleep_70113878866760">
+                      Kernel#sleep
+                   </a>
+                 </td>
+                 <td></td>
+               </tr>
+               <!-- Children -->
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="9">* indicates recursively called methods</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <h2><a name="70113887257720">Thread 70113877499920, Fiber: 70113887257720</a></h2>
+      <table>
+        <thead>
+          <tr>
+            <th>%Total</th>
+            <th>%Self</th>
+            <th>Total</th>
+            <th>Self</th>
+            <th>Wait</th>
+            <th>Child</th>
+            <th>Calls</th>
+            <th class="method_name">Name</th>
+            <th>Line</th>
+          </tr>
+        </thead>
+        <tbody>
+
+               <!-- Parents -->
+
+               <tr class="method">
+                 <td>98.78%</td>
+                 <td>-677.15%</td>
+                 <td>0.00</td>
+                 <td>-0.02</td>
+                 <td>0.03</td>
+                 <td>0.00</td>
+                 <td>1</td>
+                 <td class="method_name">
+                   <a name="Puma__Launcher_setup_signals_70113887257720">
+                      Puma::Launcher#setup_signals
+                   </a>
+                 </td>
+                 <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/launcher.rb&line=406"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/launcher.rb:406">406</a></td>
+               </tr>
+               <!-- Children -->
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>1/1</td>
+                   <td class="method_name">Puma::Launcher#stop</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/launcher.rb&line=412"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/launcher.rb:412">412</a></td>
+                 </tr>
+
+                 <tr>
+                   <td>&nbsp;</td>
+                   <td>&nbsp;</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>0.00</td>
+                   <td>1/1</td>
+                   <td class="method_name">&lt;Module::Puma&gt;#jruby?</td>
+                   <td><a href="txmt://open?url=file:///Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/launcher.rb&line=406"title="/Users/noah.gibbs/.rvm/gems/ruby-2.6.2/gems/puma-3.11.4/lib/puma/launcher.rb:406">406</a></td>
+                 </tr>
+
+               <!-- Create divider row -->
+               <tr class="break"><td colspan="9"></td></tr>
+
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="9">* indicates recursively called methods</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <h2><a name="70113878817280">Thread 70113887853820, Fiber: 70113878817280</a></h2>
+      <table>
+        <thead>
+          <tr>
+            <th>%Total</th>
+            <th>%Self</th>
+            <th>Total</th>
+            <th>Self</th>
+            <th>Wait</th>
+            <th>Child</th>
+            <th>Calls</th>
+            <th class="method_name">Name</th>
+            <th>Line</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="9">* indicates recursively called methods</td>
+          </tr>
+        </tfoot>
+      </table>
+
+  </body>
+</html>

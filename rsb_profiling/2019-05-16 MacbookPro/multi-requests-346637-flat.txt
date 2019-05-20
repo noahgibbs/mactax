@@ -1,0 +1,86 @@
+Measure Mode: wall_time
+Thread ID: 70240027139100
+Fiber ID: 70240027136860
+Total: 39.792400
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name
+ 13.87     36.735     5.519     0.000    31.216   346637   Puma::Server#handle_request
+  7.46      2.969     2.969     0.000     0.000   346637   Kernel#caller
+  5.97      2.374     2.374     0.000     0.000   346637   <Class::File>#expand_path
+  5.50      4.274     2.190     0.000     2.084  1386548   Array#each
+  4.95     20.494     1.969     0.000    18.525   346637   Rails::Application#validate_secret_key_config!
+  3.36      1.336     1.336     0.000     0.000   346636   Puma::Server#normalize_env
+  3.32      2.208     1.322     0.000     0.886   346637   Puma::Events#unknown_error
+  3.19      9.114     1.271     0.000     7.843   346637   ActiveSupport::Deprecation::Reporting#deprecation_message
+  2.65      1.056     1.056     0.000     0.000   346637   Regexp#match
+  2.35      2.374     0.935     0.000     1.439   346636   Puma::Client#reset
+  2.32      2.031     0.921     0.000     1.110   693274   ActiveSupport::OrderedOptions#method_missing
+  2.22     25.663     0.882     0.000    24.782   346637   Rack::RubyProf#call
+  2.13      7.843     0.846     0.000     6.997   346637   ActiveSupport::Deprecation::Reporting#deprecation_caller_message
+  1.90      6.997     0.755     0.000     6.242   346637   ActiveSupport::Deprecation::Reporting#extract_callstack
+  1.70     39.785     0.677     0.000    39.108       11   Puma::Server#process_client
+  1.61      1.364     0.640     0.000     0.723   346647   Puma::Client#try_to_finish
+  1.57      0.626     0.626     0.000     0.000   346635   Puma::Client#setup_body
+  1.50      1.531     0.596     0.000     0.936   346637   Rails::Application#build_original_fullpath
+  1.48      0.589     0.589     0.000     0.000   346637   Regexp#===
+  1.48     23.092     0.588     0.000    22.503   346637   Rails::Application#call
+  1.36      0.540     0.540     0.000     0.000  3466370   String#start_with?
+  1.27      0.507     0.507     0.000     0.000   693274   Puma::Server#fast_write
+  1.26      0.760     0.503     0.000     0.257   693273   Rack::RubyProf#profiler
+  1.16     14.824     0.462     0.000    14.362   346637   ActiveSupport::Deprecation::Reporting#warn
+  1.14      0.453     0.453     0.000     0.000  1386548  *Integer#to_s
+  1.10      0.438     0.438     0.000     0.000   346637   Exception#inspect
+  1.08      0.429     0.429     0.000     0.000   346637   MatchData#captures
+
+* indicates recursively called methods
+Measure Mode: wall_time
+Thread ID: 70240027138300
+Fiber ID: 70240027251420
+Total: 24.235651
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name
+
+* indicates recursively called methods
+Measure Mode: wall_time
+Thread ID: 70240027138800
+Fiber ID: 70240027249940
+Total: 24.235711
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name
+
+* indicates recursively called methods
+Measure Mode: wall_time
+Thread ID: 70240027138620
+Fiber ID: 70240025305040
+Total: 23.977178
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name
+
+* indicates recursively called methods
+Measure Mode: wall_time
+Thread ID: 70240027138460
+Fiber ID: 70240031097160
+Total: 14.717183
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name
+
+* indicates recursively called methods
+Measure Mode: wall_time
+Thread ID: 70240012795860
+Fiber ID: 70240027422960
+Total: 0.000354
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name
+  4.78      0.000     0.000     0.000     0.000        1   Puma::Launcher#setup_signals
+  3.17      0.000     0.000     0.000     0.000        1   Concurrent::AtExitImplementation#install
+  1.89      0.000     0.000     0.000     0.000        1   Puma::Launcher#graceful_stop
+  1.75      0.000     0.000     0.000     0.000        2   Puma::Server#notify_safely
+  1.68      0.000     0.000     0.000     0.000        5   IO#write
+
+* indicates recursively called methods

@@ -1,0 +1,376 @@
+Measure Mode: wall_time
+Thread ID: 70113887854460
+Fiber ID: 70113887852220
+Total Time: 4.032840251922607
+Sort by: total_time
+
+  %total   %self      total       self       wait      child            calls     name
+--------------------------------------------------------------------------------
+  99.92%   0.00%      4.030      0.000      0.000      4.029                1     Puma::ThreadPool#spawn_thread
+                      4.029      0.076      0.000      3.953              2/3     Puma::Server#process_client
+                      0.000      0.000      0.000      0.000              1/1     Puma::Client#set_timeout
+                      0.000      0.000      0.000      0.000              4/4     Puma::Client#eagerly_finish
+                      0.000      0.000      0.000      0.000              6/9     Thread::Mutex#synchronize
+                      0.000      0.000      0.000      0.000              1/1     Puma::Reactor#add
+                      0.000      0.000      0.000      0.000              1/4     Puma::Client#close
+                      0.000      0.000      0.000      0.000          3/63204     Module#===
+                      0.000      0.000      0.000      0.000              4/4     Thread#[]=
+                      0.000      0.000      0.000      0.000              4/4     <Class::Thread>#current
+--------------------------------------------------------------------------------
+                      4.029      0.076      0.000      3.953              2/3     Puma::ThreadPool#spawn_thread
+  99.91%   1.90%      4.029      0.076      0.000      3.953                3     Puma::Server#process_client
+                      3.708      0.592      0.000      3.117      31596/31597     Puma::Server#handle_request
+                      0.244      0.102      0.000      0.142      31596/31596     Puma::Client#reset
+                      0.000      0.000      0.000      0.000              3/4     Puma::Client#close
+                      0.000      0.000      0.000      0.000          2/31599     Puma::UserFileDefaultOptions#[]
+                      0.000      0.000      0.000      0.000          3/63204     Module#===
+                      0.000      0.000      0.000      0.000      31599/31599     Puma::IOBuffer#reset
+--------------------------------------------------------------------------------
+                      3.708      0.592      0.000      3.117      31596/31597     Puma::Server#process_client
+  91.95%  14.67%      3.708      0.592      0.000      3.117            31597     Puma::Server#handle_request
+                      2.535      0.004      0.000      2.531      31596/31596     Puma::Configuration::ConfigMiddleware#call
+                      0.234      0.136      0.000      0.099      31597/31597     Puma::Events#unknown_error
+                      0.136      0.136      0.000      0.000      31596/31596     Puma::Server#normalize_env
+                      0.081      0.049      0.000      0.032     63194/126388     Array#each
+                      0.060      0.038      0.000      0.022      31597/31597     Puma::Server#lowlevel_error
+                      0.034      0.034      0.000      0.000     63194/126388     Integer#to_s
+                      0.032      0.032      0.000      0.000      31597/63194     Puma::Server#fast_write
+                      0.004      0.004      0.000      0.000      31597/31597     Puma::Server#fetch_status_code
+                      0.000      0.000      0.000      0.000      63194/63194     Puma::IOBuffer#append
+                      0.000      0.000      0.000      0.000      31597/31597     String#downcase
+                      0.000      0.000      0.000      0.000      31597/63194     Hash#fetch
+                      0.000      0.000      0.000      0.000      31597/31597     Puma::Server#cork_socket
+                      0.000      0.000      0.000      0.000     31597/157983     String#bytesize
+                      0.000      0.000      0.000      0.000      31597/31597     Kernel#kind_of?
+                      0.000      0.000      0.000      0.000      63193/63204     Module#===
+                      0.000      0.000      0.000      0.000      31596/31596     Puma::Server#closed_socket?
+                      0.000      0.000      0.000      0.000      31597/31597     Kernel#respond_to?
+                      0.000      0.000      0.000      0.000      31597/31597     Puma::NullIO#close
+                      0.000      0.000      0.000      0.000      31597/31597     Puma::Server#uncork_socket
+                      0.000      0.000      0.000      0.000      31597/31597     Puma::IOBuffer#to_s
+                      0.000      0.000      0.000      0.000      31597/31597     Puma::IOBuffer#<<
+                      0.000      0.000      0.000      0.000      31597/31597     Hash#each
+                      0.000      0.000      0.000      0.000             1/10     <Class::SystemCallError>#===
+--------------------------------------------------------------------------------
+                      2.535      0.004      0.000      2.531      31596/31596     Puma::Server#handle_request
+  62.87%   0.11%      2.535      0.004      0.000      2.531            31596     Puma::Configuration::ConfigMiddleware#call
+                      2.531      0.081      0.000      2.450      31596/31597     Rack::RubyProf#call
+--------------------------------------------------------------------------------
+                      2.531      0.081      0.000      2.450      31596/31597     Puma::Configuration::ConfigMiddleware#call
+  62.77%   2.00%      2.531      0.081      0.000      2.451            31597     Rack::RubyProf#call
+                      2.282      0.057      0.000      2.225      31597/31597     Rails::Application#call
+                      0.077      0.051      0.000      0.026      63193/63193     Rack::RubyProf#profiler
+                      0.030      0.024      0.000      0.007      31596/31596     Rack::Request#path
+                      0.030      0.010      0.000      0.021      31596/31596     Rack::RubyProf#should_profile?
+                      0.014      0.014      0.000      0.000      31596/31597     Rack::RubyProf::RackProfiler#resume
+                      0.013      0.013      0.000      0.000      31597/31597     Rack::RubyProf::RackProfiler#pause
+                      0.005      0.005      0.000      0.000      31596/31596     Class#new
+--------------------------------------------------------------------------------
+                      2.282      0.057      0.000      2.225      31597/31597     Rack::RubyProf#call
+  56.58%   1.41%      2.282      0.057      0.000      2.225            31597     Rails::Application#call
+                      2.070      0.018      0.000      2.051      31597/31597     Rails::Engine#call
+                      0.156      0.059      0.000      0.096      31597/31597     Rails::Application#build_original_fullpath
+--------------------------------------------------------------------------------
+                      2.070      0.018      0.000      2.051      31597/31597     Rails::Application#call
+  51.32%   0.45%      2.070      0.018      0.000      2.051            31597     Rails::Engine#call
+                      2.051      0.026      0.000      2.025      31597/31597     Rails::Application#env_config
+--------------------------------------------------------------------------------
+                      2.051      0.026      0.000      2.025      31597/31597     Rails::Engine#call
+  50.86%   0.66%      2.051      0.026      0.000      2.025            31597     Rails::Application#env_config
+                      2.025      0.195      0.000      1.830      31597/31597     Rails::Application#validate_secret_key_config!
+--------------------------------------------------------------------------------
+                      2.025      0.195      0.000      1.830      31597/31597     Rails::Application#env_config
+  50.21%   4.83%      2.025      0.195      0.000      1.830            31597     Rails::Application#validate_secret_key_config!
+                      1.506      0.038      0.000      1.468      31597/31597     <Class::ActiveSupport::Deprecation>#warn
+                      0.213      0.100      0.000      0.113      63194/63194     ActiveSupport::OrderedOptions#method_missing
+                      0.045      0.033      0.000      0.012      31597/31601     Kernel#raise
+                      0.023      0.023      0.000      0.000      63194/63194     Rails::Application#secrets
+                      0.017      0.017      0.000      0.000      63194/63194     NilClass#blank?
+                      0.017      0.017      0.000      0.000      31597/31597     <Module::Rails>#env
+                      0.009      0.009      0.000      0.000      31597/63202     Exception#backtrace
+--------------------------------------------------------------------------------
+                      1.506      0.038      0.000      1.468      31597/31597     Rails::Application#validate_secret_key_config!
+  37.35%   0.95%      1.506      0.038      0.000      1.468            31597     <Class::ActiveSupport::Deprecation>#warn
+                      1.452      0.044      0.000      1.409      31597/31597     ActiveSupport::Deprecation::Reporting#warn
+                      0.015      0.015      0.000      0.000      31597/31597     <Class::ActiveSupport::Deprecation>#instance
+--------------------------------------------------------------------------------
+                      1.452      0.044      0.000      1.409      31597/31597     <Class::ActiveSupport::Deprecation>#warn
+  36.01%   1.09%      1.452      0.044      0.000      1.409            31597     ActiveSupport::Deprecation::Reporting#warn
+                      0.891      0.133      0.000      0.758      31597/31597     ActiveSupport::Deprecation::Reporting#deprecation_message
+                      0.295      0.295      0.000      0.000      31597/31597     Kernel#caller
+                      0.222      0.028      0.000      0.195      31597/31597     Kernel#tap
+--------------------------------------------------------------------------------
+                      0.891      0.133      0.000      0.758      31597/31597     ActiveSupport::Deprecation::Reporting#warn
+  22.09%   3.29%      0.891      0.133      0.000      0.758            31597     ActiveSupport::Deprecation::Reporting#deprecation_message
+                      0.758      0.085      0.000      0.673      31597/31597     ActiveSupport::Deprecation::Reporting#deprecation_caller_message
+--------------------------------------------------------------------------------
+                      0.758      0.085      0.000      0.673      31597/31597     ActiveSupport::Deprecation::Reporting#deprecation_message
+  18.80%   2.11%      0.758      0.085      0.000      0.673            31597     ActiveSupport::Deprecation::Reporting#deprecation_caller_message
+                      0.673      0.074      0.000      0.599      31597/31597     ActiveSupport::Deprecation::Reporting#extract_callstack
+--------------------------------------------------------------------------------
+                      0.673      0.074      0.000      0.599      31597/31597     ActiveSupport::Deprecation::Reporting#deprecation_caller_message
+  16.70%   1.84%      0.673      0.074      0.000      0.599            31597     ActiveSupport::Deprecation::Reporting#extract_callstack
+                      0.233      0.233      0.000      0.000      31597/31597     <Class::File>#expand_path
+                      0.184      0.026      0.000      0.158      31597/31597     Enumerable#find
+                      0.130      0.026      0.000      0.105      31597/31597     String#match
+                      0.045      0.045      0.000      0.000      31597/31597     MatchData#captures
+                      0.007      0.007      0.000      0.000      31597/31598     Array#first
+--------------------------------------------------------------------------------
+                      0.081      0.049      0.000      0.032     63194/126388     Puma::Server#handle_request
+                      0.158      0.104      0.000      0.053     31597/126388     Enumerable#find
+                      0.180      0.054      0.000      0.126     31597/126388     Kernel#tap
+  10.39%   5.15%      0.419      0.208      0.000      0.211           126388     Array#each
+                      0.126      0.033      0.000      0.093      31597/31597     <Module::ActiveSupport::Notifications>#instrument
+                      0.053      0.053      0.000      0.000    315970/315970     String#start_with?
+                      0.032      0.032      0.000      0.000      31597/63194     Puma::Server#fast_write
+                      0.000      0.000      0.000      0.000      31596/31596     IO#flush
+                      0.000      0.000      0.000      0.000      31597/31597     Numeric#zero?
+                      0.000      0.000      0.000      0.000     31597/157983     String#bytesize
+--------------------------------------------------------------------------------
+                      0.295      0.295      0.000      0.000      31597/31597     ActiveSupport::Deprecation::Reporting#warn
+   7.32%   7.32%      0.295      0.295      0.000      0.000            31597     Kernel#caller
+--------------------------------------------------------------------------------
+                      0.244      0.102      0.000      0.142      31596/31596     Puma::Server#process_client
+   6.06%   2.54%      0.244      0.102      0.000      0.142            31596     Puma::Client#reset
+                      0.132      0.062      0.000      0.070      31596/31598     Puma::Client#try_to_finish
+                      0.010      0.004      0.000      0.006      31596/31596     Kernel#dup
+                      0.000     -0.000      0.000      0.000      31596/31599     <Class::IO>#select
+                      0.000      0.000      0.000      0.000      31596/31596     Puma::HttpParser#reset
+--------------------------------------------------------------------------------
+                      0.234      0.136      0.000      0.099      31597/31597     Puma::Server#handle_request
+   5.81%   3.36%      0.234      0.136      0.000      0.099            31597     Puma::Events#unknown_error
+                      0.045      0.045      0.000      0.000      31597/31597     Exception#inspect
+                      0.032      0.004      0.000      0.028      31597/31597     Time#to_formatted_s
+                      0.018      0.018      0.000      0.000      31597/31597     IO#puts
+                      0.003      0.003      0.000      0.000      31597/31599     <Class::Time>#now
+                      0.000      0.000      0.000      0.000      31597/31597     Array#join
+                      0.000      0.000      0.000      0.000      31597/63202     Exception#backtrace
+                      0.000      0.000      0.000      0.000      31597/31597     Exception#respond_to?
+--------------------------------------------------------------------------------
+                      0.233      0.233      0.000      0.000      31597/31597     ActiveSupport::Deprecation::Reporting#extract_callstack
+   5.78%   5.78%      0.233      0.233      0.000      0.000            31597     <Class::File>#expand_path
+--------------------------------------------------------------------------------
+                      0.222      0.028      0.000      0.195      31597/31597     ActiveSupport::Deprecation::Reporting#warn
+   5.51%   0.69%      0.222      0.028      0.000      0.195            31597     Kernel#tap
+                      0.180      0.054      0.000      0.126     31597/126388     Array#each
+                      0.015      0.015      0.000      0.000      31597/31597     ActiveSupport::Deprecation::Behavior#behavior
+--------------------------------------------------------------------------------
+                      0.213      0.100      0.000      0.113      63194/63194     Rails::Application#validate_secret_key_config!
+   5.28%   2.48%      0.213      0.100      0.000      0.113            63194     ActiveSupport::OrderedOptions#method_missing
+                      0.062      0.038      0.000      0.024      63194/63194     ActiveSupport::OrderedOptions#[]
+                      0.031      0.031      0.000      0.000      63194/63194     Symbol#to_s
+                      0.020      0.020      0.000      0.000      63194/63194     String#chomp!
+--------------------------------------------------------------------------------
+                      0.184      0.026      0.000      0.158      31597/31597     ActiveSupport::Deprecation::Reporting#extract_callstack
+   4.56%   0.65%      0.184      0.026      0.000      0.158            31597     Enumerable#find
+                      0.158      0.104      0.000      0.053     31597/126388     Array#each
+--------------------------------------------------------------------------------
+                      0.156      0.059      0.000      0.096      31597/31597     Rails::Application#call
+   3.86%   1.47%      0.156      0.059      0.000      0.096            31597     Rails::Application#build_original_fullpath
+                      0.096      0.020      0.000      0.077      31597/31597     Object#present?
+--------------------------------------------------------------------------------
+                      0.136      0.136      0.000      0.000      31596/31596     Puma::Server#handle_request
+   3.38%   3.38%      0.136      0.136      0.000      0.000            31596     Puma::Server#normalize_env
+                      0.000      0.000      0.000      0.000      31596/31596     Puma::Client#peerip
+                      0.000      0.000      0.000      0.000     31596/126393     Hash#key?
+                      0.000      0.000      0.000      0.000     31596/157983     String#bytesize
+                      0.000      0.000      0.000      0.000      63192/63192     String#[]
+                      0.000      0.000      0.000      0.000      31596/31596     String#index
+--------------------------------------------------------------------------------
+                      0.000      0.000      0.000      0.000          2/31598     Puma::Client#eagerly_finish
+                      0.132      0.062      0.000      0.070      31596/31598     Puma::Client#reset
+   3.28%   1.54%      0.132      0.062      0.000      0.070            31598     Puma::Client#try_to_finish
+                      0.060      0.060      0.000      0.000      31595/31595     Puma::Client#setup_body
+                      0.011      0.011      0.000      0.000      31598/31598     IO#read_nonblock
+                      0.000      0.000      0.000      0.000      31595/31595     Puma::HttpParser#execute
+                      0.000      0.000      0.000      0.000          3/63202     Exception#backtrace
+                      0.000      0.000      0.000      0.000          3/31601     Kernel#raise
+                      0.000      0.000      0.000      0.000          3/63204     Module#===
+                      0.000      0.000      0.000      0.000             6/10     <Class::SystemCallError>#===
+                      0.000      0.000      0.000      0.000      31595/31595     Puma::HttpParser#finished?
+--------------------------------------------------------------------------------
+                      0.130      0.026      0.000      0.105      31597/31597     ActiveSupport::Deprecation::Reporting#extract_callstack
+   3.23%   0.64%      0.130      0.026      0.000      0.105            31597     String#match
+                      0.105      0.105      0.000      0.000      31597/31597     Regexp#match
+--------------------------------------------------------------------------------
+                      0.126      0.033      0.000      0.093      31597/31597     Array#each
+   3.12%   0.83%      0.126      0.033      0.000      0.093            31597     <Module::ActiveSupport::Notifications>#instrument
+                      0.086      0.019      0.000      0.067      31597/31597     ActiveSupport::Notifications::Fanout#listening?
+                      0.006      0.006      0.000      0.000      31597/31597     Kernel#block_given?
+--------------------------------------------------------------------------------
+                      0.105      0.105      0.000      0.000      31597/31597     String#match
+   2.59%   2.59%      0.105      0.105      0.000      0.000            31597     Regexp#match
+--------------------------------------------------------------------------------
+                      0.096      0.020      0.000      0.077      31597/31597     Rails::Application#build_original_fullpath
+   2.39%   0.48%      0.096      0.020      0.000      0.077            31597     Object#present?
+                      0.077      0.014      0.000      0.062      31597/31597     String#blank?
+--------------------------------------------------------------------------------
+                      0.086      0.019      0.000      0.067      31597/31597     <Module::ActiveSupport::Notifications>#instrument
+   2.14%   0.48%      0.086      0.019      0.000      0.067            31597     ActiveSupport::Notifications::Fanout#listening?
+                      0.060      0.020      0.000      0.040      31597/31597     ActiveSupport::Notifications::Fanout#listeners_for
+                      0.007      0.007      0.000      0.000      31597/63193     Array#any?
+--------------------------------------------------------------------------------
+                      0.077      0.051      0.000      0.026      63193/63193     Rack::RubyProf#call
+   1.91%   1.27%      0.077      0.051      0.000      0.026            63193     Rack::RubyProf#profiler
+                      0.026      0.021      0.000      0.005      63193/63193     Rack::RubyProf#aggregate_requests?
+--------------------------------------------------------------------------------
+                      0.077      0.014      0.000      0.062      31597/31597     Object#present?
+   1.90%   0.35%      0.077      0.014      0.000      0.062            31597     String#blank?
+                      0.062      0.062      0.000      0.000      31597/31597     Regexp#===
+--------------------------------------------------------------------------------
+                      0.032      0.032      0.000      0.000      31597/63194     Puma::Server#handle_request
+                      0.032      0.032      0.000      0.000      31597/63194     Array#each
+   1.58%   1.58%      0.064      0.064      0.000      0.000            63194     Puma::Server#fast_write
+                      0.000      0.000      0.000      0.000      63194/63194     IO#syswrite
+                      0.000      0.000      0.000      0.000          1/63202     Exception#backtrace
+                      0.000      0.000      0.000      0.000          1/31601     Kernel#raise
+                      0.000      0.000      0.000      0.000             3/10     <Class::SystemCallError>#===
+                      0.000      0.000      0.000      0.000     63193/157983     String#bytesize
+--------------------------------------------------------------------------------
+                      0.062      0.062      0.000      0.000      31597/31597     String#blank?
+   1.55%   1.55%      0.062      0.062      0.000      0.000            31597     Regexp#===
+--------------------------------------------------------------------------------
+                      0.062      0.038      0.000      0.024      63194/63194     ActiveSupport::OrderedOptions#method_missing
+   1.54%   0.94%      0.062      0.038      0.000      0.024            63194     ActiveSupport::OrderedOptions#[]
+                      0.013      0.013      0.000      0.000      63194/63194     Hash#[]
+                      0.011      0.011      0.000      0.000      63194/63194     Symbol#to_sym
+--------------------------------------------------------------------------------
+                      0.060      0.020      0.000      0.040      31597/31597     ActiveSupport::Notifications::Fanout#listening?
+   1.49%   0.50%      0.060      0.020      0.000      0.040            31597     ActiveSupport::Notifications::Fanout#listeners_for
+                      0.040      0.023      0.000      0.016      31597/31598     ThreadSafe::Cache#[]
+                      0.000      0.000      0.000      0.000              1/1     Mutex_m#mu_synchronize
+--------------------------------------------------------------------------------
+                      0.060      0.038      0.000      0.022      31597/31597     Puma::Server#handle_request
+   1.48%   0.95%      0.060      0.038      0.000      0.022            31597     Puma::Server#lowlevel_error
+                      0.022      0.022      0.000      0.000      31597/31599     Puma::UserFileDefaultOptions#[]
+--------------------------------------------------------------------------------
+                      0.060      0.060      0.000      0.000      31595/31595     Puma::Client#try_to_finish
+   1.48%   1.48%      0.060      0.060      0.000      0.000            31595     Puma::Client#setup_body
+                      0.000      0.000      0.000      0.000      31595/31595     Puma::HttpParser#body
+--------------------------------------------------------------------------------
+                      0.053      0.053      0.000      0.000    315970/315970     Array#each
+   1.33%   1.33%      0.053      0.053      0.000      0.000           315970     String#start_with?
+--------------------------------------------------------------------------------
+                      0.045      0.045      0.000      0.000      31597/31597     Puma::Events#unknown_error
+   1.12%   1.12%      0.045      0.045      0.000      0.000            31597     Exception#inspect
+                      0.000      0.000      0.000      0.000      31597/31597     Exception#to_s
+--------------------------------------------------------------------------------
+                      0.000      0.000      0.000      0.000          3/31601     Puma::Client#try_to_finish
+                      0.000      0.000      0.000      0.000          1/31601     Puma::Server#fast_write
+                      0.045      0.033      0.000      0.012      31597/31601     Rails::Application#validate_secret_key_config!
+   1.12%   0.83%      0.045      0.033      0.000      0.012            31601     Kernel#raise
+                      0.012      0.012      0.000      0.000      31597/31605     Exception#initialize
+                      0.000      0.000      0.000      0.000              4/4     <Class::Exception>#exception
+--------------------------------------------------------------------------------
+                      0.045      0.045      0.000      0.000      31597/31597     ActiveSupport::Deprecation::Reporting#extract_callstack
+   1.12%   1.12%      0.045      0.045      0.000      0.000            31597     MatchData#captures
+
+* indicates recursively called methods
+Measure Mode: wall_time
+Thread ID: 70113887853660
+Fiber ID: 70113910912540
+Total Time: 2.3920586109161377
+Sort by: total_time
+
+  %total   %self      total       self       wait      child            calls     name
+--------------------------------------------------------------------------------
+ 100.00%   0.00%      2.392      0.000      0.000      2.392                1     Puma::Server#handle_servers
+                      2.392      0.000      0.000      2.392              4/7     Array#each
+                      0.000      0.000      0.000      0.000              1/1     Puma::Server#graceful_shutdown
+                      0.000      0.000      0.000      0.000              1/1     Puma::Reactor#shutdown
+                      0.000      0.000      0.000      0.000              1/1     Puma::Reactor#clear!
+                      0.000      0.000      0.000      0.000              2/2     IO#close
+                      0.000      0.000      0.000      0.000              2/2     Puma::Events#fire
+                      0.000     -0.000      0.000      0.000              3/3     <Class::IO>#select
+                      0.000      0.000      0.000      0.000              4/4     Array#first
+--------------------------------------------------------------------------------
+                      0.000      0.000      0.000      0.000              2/7     Puma::Events#fire
+                      0.000      0.000      0.000      0.000              1/7     Puma::ThreadPool#shutdown
+                      2.392      0.000      0.000      2.392              4/7     Puma::Server#handle_servers
+ 100.00%   0.00%      2.392      0.000      0.000      2.392                7     Array#each
+                      2.392      0.000      0.000      2.392              3/3     Puma::ThreadPool#wait_until_not_full
+                      0.000      0.000      0.000      0.000              3/6     Class#new
+                      0.000      0.000      0.000      0.000              1/1     Puma::Server#handle_check
+                      0.000      0.000      0.000      0.000              3/3     TCPServer#accept_nonblock
+                      0.000      0.000      0.000      0.000              3/3     Puma::ThreadPool#<<
+                      0.000      0.000      0.000      0.000              3/3     Puma::Binder#env
+                      0.000     -0.000      0.000      0.000              1/2     Thread#join
+--------------------------------------------------------------------------------
+                      0.000      0.000      0.000      0.000              3/7     Puma::ThreadPool#<<
+                      0.000      0.000      0.000      0.000              1/7     Puma::ThreadPool#shutdown
+                      2.392      0.000      0.000      2.392              3/7     Puma::ThreadPool#wait_until_not_full
+ 100.00%   0.00%      2.392      0.000      0.000      2.392                7     Thread::Mutex#synchronize
+                      2.392      0.000      0.000      2.392              1/1     Thread::ConditionVariable#wait
+                      0.000      0.000      0.000      0.000              1/4     Kernel#dup
+                      0.000      0.000      0.000      0.000              1/1     Puma::ThreadPool::Reaper#stop
+                      0.000      0.000      0.000      0.000              1/1     Puma::ThreadPool::AutoTrim#stop
+                      0.000      0.000      0.000      0.000              2/2     Thread::ConditionVariable#broadcast
+                      0.000      0.000      0.000      0.000              3/3     Thread::ConditionVariable#signal
+--------------------------------------------------------------------------------
+                      2.392      0.000      0.000      2.392              3/3     Array#each
+ 100.00%   0.00%      2.392      0.000      0.000      2.392                3     Puma::ThreadPool#wait_until_not_full
+                      2.392      0.000      0.000      2.392              3/7     Thread::Mutex#synchronize
+--------------------------------------------------------------------------------
+                      2.392      0.000      0.000      2.392              1/1     Thread::Mutex#synchronize
+ 100.00%   0.00%      2.392      0.000      0.000      2.392                1     Thread::ConditionVariable#wait
+                      2.392     -8.538     10.930      0.000              1/1     Thread::Mutex#sleep
+--------------------------------------------------------------------------------
+                      2.392     -8.538     10.930      0.000              1/1     Thread::ConditionVariable#wait
+ 100.00%-356.92%      2.392     -8.538     10.930      0.000                1     Thread::Mutex#sleep
+
+* indicates recursively called methods
+Measure Mode: wall_time
+Thread ID: 70113887854160
+Fiber ID: 70113910911300
+Total Time: 2.392357349395752
+Sort by: total_time
+
+  %total   %self      total       self       wait      child            calls     name
+--------------------------------------------------------------------------------
+  99.99%   0.00%      2.392      0.000      0.000      2.392                1     Puma::Reactor#run_internal
+                      2.392     -8.537     10.929      0.000              3/3     <Class::IO>#select
+                      0.000     -0.000      0.000      0.000              4/4     Array#each
+                      0.000      0.000      0.000      0.000              1/6     Thread::Mutex#synchronize
+--------------------------------------------------------------------------------
+                      2.392     -8.537     10.929      0.000              3/3     Puma::Reactor#run_internal
+  99.98%-356.86%      2.392     -8.537     10.929      0.000                3     <Class::IO>#select
+
+* indicates recursively called methods
+Measure Mode: wall_time
+Thread ID: 70113887854000
+Fiber ID: 70113878866760
+Total Time: 2.1994271278381348
+Sort by: total_time
+
+  %total   %self      total       self       wait      child            calls     name
+--------------------------------------------------------------------------------
+ 100.00%   0.00%      2.199      0.000      0.000      2.199                1     Puma::ThreadPool::Reaper#start!
+                      2.199     -7.850     10.049      0.000            11/11     Kernel#sleep
+                      0.000      0.000      0.000      0.000            11/11     Puma::ThreadPool#reap
+--------------------------------------------------------------------------------
+                      2.199     -7.850     10.049      0.000            11/11     Puma::ThreadPool::Reaper#start!
+  99.98%-356.91%      2.199     -7.850     10.049      0.000               11     Kernel#sleep
+
+* indicates recursively called methods
+Measure Mode: wall_time
+Thread ID: 70113877499920
+Fiber ID: 70113887257720
+Total Time: 0.0033676624298095703
+Sort by: total_time
+
+  %total   %self      total       self       wait      child            calls     name
+--------------------------------------------------------------------------------
+  98.78%-677.15%      0.003     -0.023      0.026      0.000                1     Puma::Launcher#setup_signals
+                      0.000      0.000      0.000      0.000              1/1     Puma::Launcher#stop
+                      0.000      0.000      0.000      0.000              1/1     <Module::Puma>#jruby?
+
+* indicates recursively called methods
+Measure Mode: wall_time
+Thread ID: 70113887853820
+Fiber ID: 70113878817280
+Total Time: 0
+Sort by: total_time
+
+  %total   %self      total       self       wait      child            calls     name
+
+* indicates recursively called methods
