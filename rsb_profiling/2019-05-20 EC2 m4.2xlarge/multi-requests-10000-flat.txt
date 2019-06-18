@@ -1,0 +1,60 @@
+Measure Mode: wall_time
+Thread ID: 26516700
+Fiber ID: 26514380
+Total: 98.318108
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name
+  3.40     17.760     3.343     0.000    14.417   560092  *Class#new
+  2.18      2.147     2.147     0.000     0.000    50000   Rack::BodyProxy#initialize
+  2.12      2.329     2.080     0.000     0.249    10000   ActionDispatch::Http::Headers#env_name
+  1.96      3.623     1.929     0.000     1.694   130024   Hash#each
+  1.79      3.091     1.765     0.000     1.326    20000   String#sub
+  1.64      1.613     1.613     0.000     0.000   199991   String#downcase
+  1.39      1.368     1.368     0.000     0.000   899995   <Class::Thread>#current
+  1.33      1.309     1.309     0.000     0.000    20001   Hash#values_at
+  1.32      1.300     1.300     0.000     0.000   599989   Kernel#respond_to?
+  1.26      1.235     1.235     0.000     0.000    20000   String#capitalize
+  1.25      2.995     1.234     0.000     1.762    10000   ActionDispatch::Http::URL#host
+  1.19      2.144     1.169     0.000     0.975    30000   ActionView::LookupContext#formats=
+  1.16      1.138     1.138     0.000     0.000   129998   String#split
+  1.13      3.441     1.111     0.000     2.329    10000   ActionDispatch::Http::Headers#[]
+  1.04      1.934     1.020     0.000     0.914    10000   Rack::Request#ssl?
+
+* indicates recursively called methods
+Measure Mode: wall_time
+Thread ID: 26515900
+Fiber ID: 26989640
+Total: 94.623605
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name
+
+* indicates recursively called methods
+Measure Mode: wall_time
+Thread ID: 26516220
+Fiber ID: 20512600
+Total: 93.951919
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name
+
+* indicates recursively called methods
+Measure Mode: wall_time
+Thread ID: 26516380
+Fiber ID: 9159820
+Total: 90.499203
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name
+
+* indicates recursively called methods
+Measure Mode: wall_time
+Thread ID: 26516060
+Fiber ID: 27656100
+Total: 69.917069
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name
+
+* indicates recursively called methods

@@ -1,0 +1,48 @@
+Measure Mode: wall_time
+Thread ID: 32321320
+Fiber ID: 32319000
+Total: 5.125072
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name
+  2.23      0.128     0.114     0.000     0.014     1000   <Module::Rack::Utils>#parse_nested_query
+  2.01      0.965     0.103     0.000     0.862    56092  *Class#new
+  1.83      0.164     0.094     0.000     0.070    13024   Hash#each
+  1.69      0.087     0.087     0.000     0.000     5004   Array#compact
+  1.66      0.105     0.085     0.000     0.021    12997   MonitorMixin#mon_enter
+  1.65      0.085     0.085     0.000     0.000    24074   Symbol#to_s
+  1.63      0.083     0.083     0.000     0.000    59989   Kernel#respond_to?
+  1.54      0.120     0.079     0.000     0.041    35997   ThreadSafe::Cache#[]
+  1.47      0.128     0.075     0.000     0.053    36994   ActiveSupport::PerThreadRegistry#instance
+  1.24      0.064     0.064     0.000     0.000     7999   Hash#initialize_copy
+  1.16      0.144     0.060     0.000     0.085     2000   ActiveRecord::ConnectionAdapters::ConnectionHandler#connected?
+  1.11      0.057     0.057     0.000     0.000    89989   <Class::Thread>#current
+
+* indicates recursively called methods
+Measure Mode: wall_time
+Thread ID: 32320540
+Fiber ID: 32777260
+Total: 4.767289
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name
+
+* indicates recursively called methods
+Measure Mode: wall_time
+Thread ID: 32320860
+Fiber ID: 29906340
+Total: 4.086708
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name
+
+* indicates recursively called methods
+Measure Mode: wall_time
+Thread ID: 32321020
+Fiber ID: 30511720
+Total: 0.771212
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name
+
+* indicates recursively called methods
